@@ -25,6 +25,8 @@
 
 
 			@include('components.standings.tournament', ['data' => $standings])
+		</div>
+	</div>
 
 
 @endsection

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Standings;
 use App\Models\Tournament;
+use App\Breadcrumbs;
 
 class StandingsController extends Controller
 {
@@ -15,10 +16,15 @@ class StandingsController extends Controller
 
         $data = Standings::loadSingleStandings($id_tournament, $id_competition);
 
+        $breadcrumbs = new Breadcrumbs();
+
         //dd($data);
 
         return view('standings', 
-            ['data' => $data ]
+            [
+            	'breadcrumbs' => $breadcrumbs->get(),
+            	'data' => $data
+            ]
         );
     }
 }

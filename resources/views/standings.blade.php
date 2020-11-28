@@ -1,4 +1,17 @@
-<h1>Standings view</h1>
-<small>resources/views/standings</small>
 
-@include('components.standings.tournament', ['standings' => $data['standings'], 'tournament' => $data['tournament']])
+@extends('layout.base')
+
+@section('title', __('Klasyfikacja'))
+
+@section('content')
+
+	@include('components.breadcrumbs')
+
+	<div class="content__main content--competition">
+		<div class="viewport">
+			@include('components.standings.tournament', ['standings' => $data['standings'], 'tournament' => $data['tournament']])
+		</div>
+	</div>
+
+
+@endsection
