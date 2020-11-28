@@ -22,7 +22,7 @@
 					<td>{{ $row['position'] != 0 ? $row['position'].'.' : '' }}</td>
 					<td>{{ $row['bib'] }}</td>
 					<td><a href="{{ url('/jumper/'.$row['name'].'/'.$competition['tournament']['id']) }}">{{ $row['name'] }}</a></td>
-					<td>{{ $row['country'] }}</td>
+					<td><img src="{{ asset('img/flags/'.$row['country'].'.svg') }}" alt="{{ $row['country'] }}"/></td>
 					<td>{{ $row['round1'] }}</td>
 					<td>{{ $row['round2'] ? $row['round2'] : '' }}</td>
 					<td>{{ $row['result'] }}</td>

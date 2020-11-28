@@ -24,7 +24,7 @@
 				<tr>
 					<td>{{ $row['position'] != 0 ? $row['position'].'.' : '' }}</td>
 					<td><a href="{{ url('/jumper/'.$row['name'].'/'.$data['tournament']['id']) }}">{{ $row['name'] }}</a></td>
-					<td>{{ $row['country'] }}</td>
+					<td><img src="{{ asset('img/flags/'.$row['country'].'.svg') }}" alt="{{ $row['country'] }}"/></td>
 					<td>{{ $row['points'] }}</td>
 					<td>{{ $row['difference'] }}</td>
 				</tr>
