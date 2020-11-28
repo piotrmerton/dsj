@@ -4,6 +4,8 @@
 
 @section('content')
 
+	@include('components.breadcrumbs')
+
 	<div class="content__main content--competition">
 		<div class="viewport">
 

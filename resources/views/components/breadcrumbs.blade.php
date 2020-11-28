@@ -4,7 +4,11 @@
 
 	@foreach ($breadcrumbs as $trail)
 
-		<li><a href="{{ $trail['url'] }}">{{ $trail['title'] }}</a></li>
+		@if ($trail['url'])
+			<li><a href="{{ $trail['url'] }}">{{ $trail['title'] }}</a></li>
+		@else
+			<li><span>{{ $trail['title'] }}</span></li>
+		@endif
 
 	@endforeach
 
