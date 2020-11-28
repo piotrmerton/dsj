@@ -17,7 +17,7 @@ class Breadcrumbs {
             'url' => route('tournaments'),
         );        		
 
-        $this->add($title, $route);
+        if($title) $this->add($title, $route);
 
 	}
 
