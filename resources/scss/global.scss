@@ -1,3 +1,10 @@
-body {
-	border: 1rem solid silver;
-}
+@import 'base/reset';
+
+@import 'utilities/variables';
+
+@import 'base/viewport';
+@import 'base/generic';
+
+@import 'components/standings';
+
+

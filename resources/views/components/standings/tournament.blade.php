@@ -9,7 +9,7 @@
 		]) !!}
 	</h2>
 
-	<table class="standings__table">
+	<table class="standings__table table--tournament">
 		<thead>
 			<tr>
 				<td>{{ __('Pozycja') }}</td>

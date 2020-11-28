@@ -1,0 +1,39 @@
+//path to assets dir, relative to outputted html
+$assetsPath: "..";
+
+//grid
+$grid-gutter-desktop: 2.75rem;
+$grid-gutter-laptop: 2.75rem;
+$grid-gutter-mobile: 2rem;
+
+//vertical margins/paddings
+$vertical-whitespace-desktop: 6rem;
+$vertical-whitespace-mobile: 4rem;
+
+//horizontal whitespace
+$viewport-padding: 1rem;
+
+//colors
+$text_silver: #777F85;
+$black: #272727;
+$graphite: #4C4C4B;
+$purple: #211A4A;
+$pink: #E575B2;
+$pink_tinted: #FFF1EB;
+$pink_strong: #E40B81;
+
+$viewport_width: 1280px;
+
+$breakpoint_phone: 480px;
+$breakpoint_tablet-small: 640px;
+$breakpoint_tablet-portrait: 768px;
+$breakpoint_mobile: 960px;
+$breakpoint_tablet: 1024px;
+$breakpoint_desktop: 1180px;
+$breakpoint_laptop: 1366px;
+$breakpoint_laptop-big: 1440px;
+
+$breakpoint_hd: 1280px;
+
+$breakpoint_fullhd: 1920px;
+$breakpoint_wqhd: 2560px;

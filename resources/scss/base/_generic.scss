@@ -1,0 +1,62 @@
+//default style of generic html elements
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+
+a {
+    text-decoration: none;
+
+    @media (hover: hover) {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+ul {
+    list-style-type: none
+}
+
+
+img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+
+address {
+    font-style: normal;
+}
+
+button {
+    cursor: pointer;
+    background: transparent;
+}
+
+
+dl {
+    dt {
+        float: left;
+        margin-right: 1rem;
+    }
+}
+
+
+table {
+    
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+
+    td {
+        padding: .5rem;
+    }
+    tr {
+        border: 1px solid silver;
+    }
+}
