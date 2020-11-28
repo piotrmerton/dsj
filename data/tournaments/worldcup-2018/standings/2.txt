@@ -1,0 +1,54 @@
+﻿Puchar Świata 2018-01-07
+Klasyfikacja po 2/32 konkursie
+
+Poz.  Zawodnik                 Kraj         I    II   III     Punkty
+1.    Simon Ammann             SUI          1     -     -        126
+2.    Hideharu Miyahira        JPN          1     -     -        118
+3.    Ari-Pekka Nikola         FIN          -     1     -        106
+4.    Janne Ahonen             FIN          -     1     -         91
+5.    Domen Prevc              SLO          -     -     -         67
+6.    Risto Jussilainen        FIN          -     -     -         64
+7.    Wolfgang Loitzl          AUT          -     -     -         63
+8.    Thomas Morgenstern       AUT          -     -     1         62
+9.    Martin Schmitt           GER          -     -     1         60
+10.   Dmitri Wassiliew         RUS          -     -     -         50
+      Kazuyoshi Funaki         JPN          -     -     -         50
+12.   Nicolas Dessum           FRA          -     -     -         46
+13.   Velli-Matti Lindstroem   FIN          -     -     -         41
+14.   Adam Małysz              POL          -     -     -         40
+      Johan Remen Evensen      NOR          -     -     -         40
+16.   Toni Nieminen            FIN          -     -     -         38
+17.   Jernej Damjan            SLO          -     -     -         36
+18.   Emanuel Chedal           FRA          -     -     -         29
+      Kamil Stoch              POL          -     -     -         29
+      Takanobu Okabe           JPN          -     -     -         29
+21.   Dieter Thoma             GER          -     -     -         22
+      Severin Freund           GER          -     -     -         22
+      Tommy Ingebrigtsen       NOR          -     -     -         22
+24.   Tami Kiuru               FIN          -     -     -         20
+25.   Daiki Ito                JPN          -     -     -         18
+      Masahiko Harada          JPN          -     -     -         18
+      Roberto Cecon            ITA          -     -     -         18
+28.   Jani Soininen            FIN          -     -     -         17
+29.   Andreas Goldberger       AUT          -     -     -         15
+      Martin Koch              AUT          -     -     -         15
+31.   Gregor Schlierenzauer    AUT          -     -     -         14
+      Robert Kranjec           SLO          -     -     -         14
+33.   Andreas Koffler          AUT          -     -     -         11
+34.   Anders Bardal            NOR          -     -     -          7
+      Noriaki Kasai            JPN          -     -     -          7
+36.   Jakub Janda              CZE          -     -     -          6
+37.   Andreas Widhoelzl        AUT          -     -     -          5
+38.   Primoż Peterka           SLO          -     -     -          3
+39.   Martin Hoellwarth        AUT          -     -     -          1
+      Matti Hautamaeki         FIN          -     -     -          1
+41.   Anders Jacobsen          NOR          -     -     -          0
+      Daniel-Andre Tande       NOR          -     -     -          0
+      Jan Matura               CZE          -     -     -          0
+      Michael Neumayer         GER          -     -     -          0
+      Michael Uhrmann          GER          -     -     -          0
+      Peter Prevc              SLO          -     -     -          0
+      Roar Ljoekelsoey         NOR          -     -     -          0
+      Stefan Horngacher        AUT          -     -     -          0
+      Sven Hannawald           GER          -     -     -          0
+      Tom Hilde                NOR          -     -     -          0

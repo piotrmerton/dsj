@@ -1,0 +1,54 @@
+﻿Puchar Świata 2019-11-30
+Klasyfikacja po 2/32 konkursie
+
+Poz.  Zawodnik                 Kraj         I    II   III     Punkty
+1.    Daiki Ito                JPN          -     1     -        116
+2.    Andreas Koffler          AUT          1     -     -        115
+3.    Kazuyoshi Funaki         JPN          -     1     -        106
+4.    Toni Nieminen            FIN          1     -     -        100
+5.    Dieter Thoma             GER          -     -     -         90
+6.    Simon Ammann             SUI          -     1     -         80
+7.    Thomas Morgenstern       AUT          -     -     -         77
+8.    Risto Jussilainen        FIN          -     -     1         60
+9.    Noriaki Kasai            JPN          -     -     -         54
+10.   Martin Koch              AUT          -     -     -         52
+11.   Janne Ahonen             FIN          -     -     -         51
+12.   Tommy Ingebrigtsen       NOR          -     -     -         47
+13.   Wolfgang Loitzl          AUT          -     -     -         44
+14.   Jan Matura               CZE          -     -     -         40
+15.   Emanuel Chedal           FRA          -     -     -         35
+      Tami Kiuru               FIN          -     -     -         35
+17.   Velli-Matti Lindstroem   FIN          -     -     -         32
+18.   Hideharu Miyahira        JPN          -     -     -         27
+19.   Peter Prevc              SLO          -     -     -         26
+20.   Ari-Pekka Nikola         FIN          -     -     -         23
+21.   Domen Prevc              SLO          -     -     -         22
+      Severin Freund           GER          -     -     -         22
+23.   Adam Małysz              POL          -     -     -         20
+      Nicolas Dessum           FRA          -     -     -         20
+      Roberto Cecon            ITA          -     -     -         20
+26.   Anders Bardal            NOR          -     -     -         18
+27.   Dmitri Wassiliew         RUS          -     -     -         17
+28.   Andreas Widhoelzl        AUT          -     -     -         16
+29.   Michael Neumayer         GER          -     -     -         14
+30.   Kamil Stoch              POL          -     -     -         13
+31.   Andreas Goldberger       AUT          -     -     -         12
+      Jani Soininen            FIN          -     -     -         12
+33.   Martin Hoellwarth        AUT          -     -     -         10
+34.   Daniel-Andre Tande       NOR          -     -     -          9
+35.   Jernej Damjan            SLO          -     -     -          6
+      Takanobu Okabe           JPN          -     -     -          6
+37.   Roar Ljoekelsoey         NOR          -     -     -          5
+38.   Michael Uhrmann          GER          -     -     -          3
+39.   Robert Kranjec           SLO          -     -     -          1
+40.   Anders Jacobsen          NOR          -     -     -          0
+      Gregor Schlierenzauer    AUT          -     -     -          0
+      Jakub Janda              CZE          -     -     -          0
+      Johan Remen Evensen      NOR          -     -     -          0
+      Martin Schmitt           GER          -     -     -          0
+      Masahiko Harada          JPN          -     -     -          0
+      Matti Hautamaeki         FIN          -     -     -          0
+      Primoż Peterka           SLO          -     -     -          0
+      Stefan Horngacher        AUT          -     -     -          0
+      Sven Hannawald           GER          -     -     -          0
+      Tom Hilde                NOR          -     -     -          0

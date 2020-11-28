@@ -1,0 +1,54 @@
+﻿Puchar Świata 2018-01-20
+Klasyfikacja po 7/32 konkursie
+
+Poz.  Zawodnik                 Kraj         I    II   III     Punkty
+1.    Hideharu Miyahira        JPN          1     -     -        239
+2.    Thomas Morgenstern       AUT          1     -     1        234
+3.    Andreas Widhoelzl        AUT          1     1     -        230
+      Ari-Pekka Nikola         FIN          1     1     -        230
+5.    Martin Schmitt           GER          1     -     1        223
+6.    Wolfgang Loitzl          AUT          1     -     -        209
+7.    Risto Jussilainen        FIN          -     -     1        197
+8.    Sven Hannawald           GER          -     1     -        175
+9.    Simon Ammann             SUI          1     -     -        169
+10.   Adam Małysz              POL          -     -     -        163
+11.   Janne Ahonen             FIN          -     1     -        159
+12.   Roberto Cecon            ITA          -     1     -        143
+13.   Tommy Ingebrigtsen       NOR          -     -     -        137
+14.   Velli-Matti Lindstroem   FIN          -     -     -        130
+15.   Jan Matura               CZE          -     1     -        128
+16.   Dmitri Wassiliew         RUS          -     -     1        115
+17.   Andreas Goldberger       AUT          -     -     -        107
+18.   Toni Nieminen            FIN          -     -     -        106
+19.   Jani Soininen            FIN          -     -     -        104
+20.   Johan Remen Evensen      NOR          -     -     -        102
+      Takanobu Okabe           JPN          -     -     1        102
+22.   Martin Hoellwarth        AUT          -     -     -         96
+23.   Domen Prevc              SLO          -     -     -         95
+24.   Tom Hilde                NOR          -     1     -         93
+25.   Dieter Thoma             GER          -     -     -         89
+26.   Andreas Koffler          AUT          -     -     1         86
+27.   Daniel-Andre Tande       NOR          -     -     -         85
+28.   Anders Jacobsen          NOR          -     -     -         76
+29.   Robert Kranjec           SLO          -     -     -         72
+30.   Peter Prevc              SLO          -     -     -         71
+31.   Masahiko Harada          JPN          -     -     -         68
+32.   Matti Hautamaeki         FIN          -     -     1         66
+33.   Jernej Damjan            SLO          -     -     -         60
+34.   Kamil Stoch              POL          -     -     -         59
+      Kazuyoshi Funaki         JPN          -     -     -         59
+36.   Nicolas Dessum           FRA          -     -     -         57
+37.   Roar Ljoekelsoey         NOR          -     -     -         54
+38.   Martin Koch              AUT          -     -     -         51
+      Stefan Horngacher        AUT          -     -     -         51
+40.   Jakub Janda              CZE          -     -     -         50
+41.   Primoż Peterka           SLO          -     -     -         44
+42.   Anders Bardal            NOR          -     -     -         42
+      Severin Freund           GER          -     -     -         42
+44.   Tami Kiuru               FIN          -     -     -         40
+45.   Noriaki Kasai            JPN          -     -     -         37
+46.   Gregor Schlierenzauer    AUT          -     -     -         32
+47.   Emanuel Chedal           FRA          -     -     -         31
+48.   Daiki Ito                JPN          -     -     -         22
+49.   Michael Neumayer         GER          -     -     -         13
+50.   Michael Uhrmann          GER          -     -     -          3
