@@ -5,7 +5,7 @@ namespace App\Models;
 define('PATH', base_path() ); //TO DO: https://stackoverflow.com/questions/42155536/what-is-the-best-practice-for-adding-constants-in-laravel-long-list
 
 
-class Data {
+class DsjData {
     
 
 	public static $dir_tournaments = PATH . '\data\tournaments'; 

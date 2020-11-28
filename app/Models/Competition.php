@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Models\Data;
+use App\Models\DsjData;
 use App\Models\Tournament;
 
 class Competition {
@@ -21,14 +21,14 @@ class Competition {
      */
     public static function loadCompetition($id_tournament, $id_competition) : array {
 
-        $path = Data::$dir_tournaments.'/'.$id_tournament;
+        $path = DsjData::$dir_tournaments.'/'.$id_tournament;
 
         // load DSJ4 stats file 
         $file = file($path.'/competitions/'.$id_competition.'.txt');
 
-        $header = Data::parseDsjStatHeader($file);
+        $header = DsjData::parseDsjStatHeader($file);
 
-        $results = Data::parseDsjStatResults($file, $header['type']);
+        $results = DsjData::parseDsjStatResults($file, $header['type']);
 
         $tournament_meta = Tournament::loadTournamentMeta($id_tournament);
 

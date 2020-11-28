@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Models\Data;
+use App\Models\DsjData;
 use Symfony\Component\Yaml\Yaml; //https://stackoverflow.com/a/54129307
 
 
@@ -22,7 +22,7 @@ class Tournament {
 	 */
 	public static function loadTournaments() {
 
-		$path = Data::$dir_tournaments;
+		$path = DsjData::$dir_tournaments;
         $files = array();
 
         if ($handle = opendir($path)) {
@@ -57,7 +57,7 @@ class Tournament {
 
     public static function loadTournamentMeta($id_tournament) : array {
 
-        $path = Data::$dir_tournaments.'/'.$id_tournament;
+        $path = DsjData::$dir_tournaments.'/'.$id_tournament;
 
         $file = file_get_contents($path . '/'. 'data.yml');
 
@@ -71,7 +71,7 @@ class Tournament {
 
     public static function loadTournamentCompetitions($id_tournament, $results = false) : array {
 
-        $path = Data::$dir_tournaments.'/'.$id_tournament.'/competitions';
+        $path = DsjData::$dir_tournaments.'/'.$id_tournament.'/competitions';
 
         if ($handle = opendir($path)) {
 
@@ -83,11 +83,11 @@ class Tournament {
                     // load DSJ4 stats file 
                     $file = file($path .'/'. $item);
 
-                    $competition_data = Data::parseDsjStatHeader($file);
+                    $competition_data = DsjData::parseDsjStatHeader($file);
                     $competition_data['id'] = str_replace('.txt', '', $item);
 
                     if( $results ) {
-                    	$competition_data['results'] = Data::parseDsjStatResults($file, $competition_data['type']);
+                    	$competition_data['results'] = DsjData::parseDsjStatResults($file, $competition_data['type']);
                     }
 
                     $tournament_comps[] = $competition_data;
@@ -112,7 +112,7 @@ class Tournament {
     /** load all Tournament standings **/
     public static function loadTournamentStandings($id_tournament) : array {
 
-        $path = Data::$dir_tournaments.'/'.$id_tournament.'/standings';
+        $path = DsjData::$dir_tournaments.'/'.$id_tournament.'/standings';
 
         if ($handle = opendir($path)) {
 
@@ -124,7 +124,7 @@ class Tournament {
                     // load DSJ4 stats file 
                     $file = file($path .'/'. $item);
 
-                    $standings = Data::parseDsjStatStandings($file);
+                    $standings = DsjData::parseDsjStatStandings($file);
                     $id_competition = str_replace('.txt', '', $item);
 
 

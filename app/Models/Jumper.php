@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use App\Models\Data;
 use App\Models\Tournament;
 
 
