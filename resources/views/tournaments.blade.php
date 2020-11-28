@@ -1,14 +1,20 @@
-<h1>List of all Tournaments</h1>
-<small>resources/views/tournaments</small>
+@extends('layout.base')
 
+@section('title', 'List of all Tournaments')
 
+@section('content')
 
-<ul>
+	<h1>List of all Tournaments</h1>
+	<small>resources/views/tournaments</small>
 
-	@foreach($tournaments as $tournament)
+	<ul>
 
-		<li><a href="{{ url('/tournament/'.$tournament['id']) }}">{{ $tournament['name'] }}</a></li>
+		@foreach($tournaments as $tournament)
 
-	@endforeach
+			<li><a href="{{ url('/tournament/'.$tournament['id']) }}">{{ $tournament['name'] }}</a></li>
 
-</ul>
+		@endforeach
+
+	</ul>
+
+@endsection
