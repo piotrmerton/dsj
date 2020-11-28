@@ -1,0 +1,28 @@
+{
+  "name": "laravel-custom-build-assets",
+  "version": "2020.11.28",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --progress --colors --mode production",
+    "webpack": "webpack --mode development",
+    "watch": "webpack --progress --colors --watch --mode development"
+  },
+  "author": "Piotr Merton",
+  "license": "ISC",
+  "homepage": "",
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.3.0",
+    "mini-css-extract-plugin": "^0.11.1",
+    "node-sass": "^4.14.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "sass-loader": "^6.0.7",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {}
+}

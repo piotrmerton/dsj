@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://scss/global.scss"],"names":[],"mappings":"AAAA,KACC,wBAAyB","file":"global.bundle.css","sourcesContent":["body {\r\n\tborder: 1rem solid silver;\r\n}\r\n"]}

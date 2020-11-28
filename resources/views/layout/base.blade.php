@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>DSJ API - @yield('title')</title>
+
+        <link href="{{ asset('css/global.bundle.css') }}" rel="stylesheet">
     </head>
     <body>
 
