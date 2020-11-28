@@ -1,0 +1,57 @@
+﻿Puchar Świata 2020-11-26
+Klasyfikacja po 3/33 konkursie
+
+Poz.  Zawodnik                 Kraj         I    II   III     Punkty
+1.    Matti Hautamaeki         FIN          1     -     1        163
+2.    Robert Kranjec           SLO          -     1     -        154
+3.    Janne Ahonen             FIN          -     1     -        151
+4.    Tom Hilde                NOR          -     -     -        124
+5.    Gregor Schlierenzauer    AUT          1     -     -        103
+6.    Jani Soininen            FIN          1     -     -        100
+7.    Ari-Pekka Nikkola        FIN          -     -     -         87
+8.    Thomas Morgenstern       AUT          -     -     1         86
+9.    Dmitri Vassiliev         RUS          -     -     -         80
+      Sven Hannawald           GER          -     1     -         80
+11.   Martin Hoellwarth        AUT          -     -     -         72
+12.   Daiki Ito                JPN          -     -     -         67
+      Jernej Damjan            SLO          -     -     -         67
+14.   Takanobu Okabe           JPN          -     -     -         62
+15.   Stefan Horngacher        AUT          -     -     1         60
+16.   Lasse Ottesen            NOR          -     -     -         55
+17.   Noriaki Kasai            JPN          -     -     -         52
+18.   Anders Bardal            NOR          -     -     -         50
+      Martin Schmitt           GER          -     -     -         50
+20.   Kamil Stoch              POL          -     -     -         46
+21.   Tommy Ingebrigtsen       NOR          -     -     -         41
+22.   Martin Koch              AUT          -     -     -         34
+      Severin Freund           GER          -     -     -         34
+24.   Jan Matura               CZE          -     -     -         32
+      Wolfgang Loitzl          AUT          -     -     -         32
+26.   Kazuyoshi Funaki         JPN          -     -     -         28
+27.   Roar Ljoekelsoey         NOR          -     -     -         26
+28.   Veli-Matti Lindstroem    FIN          -     -     -         24
+29.   Toni Nieminen            FIN          -     -     -         23
+30.   Anders Jacobsen          NOR          -     -     -         22
+31.   Hideharu Miyahira        JPN          -     -     -         21
+32.   Peter Zonta              SLO          -     -     -         20
+33.   Adam Małysz              POL          -     -     -         17
+      Jakub Janda              CZE          -     -     -         17
+35.   Andreas Widhoelzl        AUT          -     -     -         16
+36.   Michael Uhrmann          GER          -     -     -         12
+37.   Roberto Cecon            ITA          -     -     -         11
+38.   Peter Prevc              SLO          -     -     -         10
+      Tami Kiuru               FIN          -     -     -         10
+40.   Masahiko Harada          JPN          -     -     -          6
+      Nicolas Dessum           FRA          -     -     -          6
+42.   Andreas Goldberger       AUT          -     -     -          4
+43.   Dieter Thoma             GER          -     -     -          3
+44.   Daniel-Andre Tande       NOR          -     -     -          1
+      Simon Ammann             SUI          -     -     -          1
+46.   Andreas Kofler           AUT          -     -     -          0
+      Domen Prevc              SLO          -     -     -          0
+      Emmanuel Chedal          FRA          -     -     -          0
+      Johan Remen Evensen      NOR          -     -     -          0
+      Michael Neumayer         GER          -     -     -          0
+      Primoż Peterka           SLO          -     -     -          0
+      Risto Jussilainen        FIN          -     -     -          0
+      Ville Kantee             FIN          -     -     -          0
