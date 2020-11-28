@@ -40,6 +40,12 @@ class Tournament {
 
         }
 
+
+        //sort by id https://stackoverflow.com/a/2699159
+        usort($files, function($a, $b) {
+            return $b['date_start'] <=> $a['date_start'];
+        });         
+
 		return $files;
 
 
