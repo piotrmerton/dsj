@@ -22,7 +22,10 @@
 		<tbody>
 			@foreach ($data['standings']['results'] as $row)
 				<tr>
-					<td>{{ $row['position'] != 0 ? $row['position'].'.' : '' }}</td>
+					<td class="position">
+						<span class="position__value">{{ $row['real_position'] }}.</span>
+						<span class="position__trend trend--{{ $row['trend'] }}"></span>
+					</td>
 					<td><a href="{{ url('/jumper/'.$row['name'].'/'.$data['tournament']['id']) }}">{{ $row['name'] }}</a></td>
 					<td><img src="{{ asset('img/flags/'.$row['country'].'.svg') }}" alt="{{ $row['country'] }}"/></td>
 					<td>{{ $row['points'] }}</td>

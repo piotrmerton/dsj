@@ -17,5 +17,39 @@
 			height: 1rem;
 		}
 
+		.position {
+			display: flex;
+			align-items: center;
+		}
+
+	}
+
+	.position__value {
+		min-width: 1.5rem;
+	}
+	.position__trend {
+		display: block;
+		margin-left: .5rem;
+
+		&.trend--positive {
+
+			width: 0; 
+			height: 0; 
+			border-left: .375rem solid transparent;
+			border-right: .375rem solid transparent;
+
+			border-bottom: .375rem solid green;
+
+		}
+
+		&.trend--negative {
+			width: 0; 
+			height: 0; 
+			border-left: .375rem solid transparent;
+			border-right: .375rem solid transparent;
+
+			border-top: .375rem solid red;			
+		}
+
 	}
 }

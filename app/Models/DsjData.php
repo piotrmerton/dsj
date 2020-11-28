@@ -196,6 +196,7 @@ class DsjData {
                 'points' => $points,
                 'difference' => $previous_jumper_result != 0 ? '-'.($top_score - $points) : '',
                 'previous_position' => null,
+                'trend' => null,
             );
 
             $iteration++;
