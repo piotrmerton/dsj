@@ -9,7 +9,7 @@ use App\Models\Tournament;
 class Standings {
 
 
-    public static function loadSingleStandings($id_tournament, $id_competition) : array {
+    public static function loadSingleStandings($id_tournament, $id_competition, $compare = true) : array {
 
         $path = DsjData::$dir_tournaments.'/'.$id_tournament;
 
@@ -17,7 +17,7 @@ class Standings {
         $file = file($path.'/standings/'.$id_competition.'.txt');
 
         $standings = DsjData::parseDsjStatStandingsHeader($file);
-        $standings['results'] = DsjData::parseDsjStatStandings($file);
+        $standings['results'] = DsjData::parseDsjStatStandings($file, $id_tournament, $id_competition, $compare);
 
         $tournament_meta = Tournament::loadTournamentMeta($id_tournament);
 
@@ -25,6 +25,7 @@ class Standings {
         	'tournament' => $tournament_meta,
         	'standings' => $standings,
         );
+
 
         return $data;
 

@@ -69,7 +69,7 @@ class DsjData {
     /**
      * parse Results of single Competition Standings file
      */
-    public static function parseDsjStatResults($file, $type) : array {
+    public static function parseDsjStatResults(array $file, string $type) : array {
 
         $real_position = 1;
         $iteration = 1;
@@ -138,7 +138,7 @@ class DsjData {
     /**
      * parse Header of Tournament Standings file
      */
-    public static function parseDsjStatStandingsHeader($file) : array {
+    public static function parseDsjStatStandingsHeader(array $file) : array {
 
         $date = preg_split('/\s+/', $file[0]);
         $stage = preg_split('/\s+/', $file[1]);
@@ -156,7 +156,7 @@ class DsjData {
     /**
      * parse Results of Tournament Standings file
      */
-    public static function parseDsjStatStandings($file) : array {
+    public static function parseDsjStatStandings(array $file, string $id_tournament = NULL, int $id_competition = NULL, bool $compare = true) : array {
 
         $real_position = 1;
         $iteration = 1;
@@ -195,6 +195,7 @@ class DsjData {
                 'country' => $country,
                 'points' => $points,
                 'difference' => $previous_jumper_result != 0 ? '-'.($top_score - $points) : '',
+                'previous_position' => null,
             );
 
             $iteration++;
@@ -202,6 +203,25 @@ class DsjData {
 
             //save previous jumper results in order to save ex aequo position
             $previous_jumper_result = $points;
+
+
+            if(isset($id_tournament) && isset($id_competition) && $id_competition > 1 && $compare == true) {
+
+                $previous_standings = Standings::loadSingleStandings($id_tournament, (int)$id_competition - 1, false);
+
+                foreach($standings as $key => $current_results) {
+
+                    foreach($previous_standings['standings']['results'] as $previous_results) {
+
+                        if( $current_results['name'] === $previous_results['name']) {
+                            $standings[$key]['previous_position'] = $previous_results['real_position'];
+                            break;
+                        }
+
+                    }
+
+                }
+            }
 
         }
 

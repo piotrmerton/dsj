@@ -18,7 +18,7 @@ class StandingsController extends Controller
         //dd($data);
 
         return view('standings', 
-            ['data' => $data]
+            ['data' => $data ]
         );
     }
 }
