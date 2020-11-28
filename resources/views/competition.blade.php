@@ -1,6 +1,6 @@
 @extends('layout.base')
 
-@section('title', $competition['venue']['city'] . ' ' . $competition['venue']['hs'])
+@section('title', $competition['name'])
 
 @section('content')
 
