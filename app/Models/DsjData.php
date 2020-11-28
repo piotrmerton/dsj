@@ -75,6 +75,7 @@ class DsjData {
         $iteration = 1;
         $previous_jumper_result = 0;
         $ex_aequo = 0;
+        $qualified = 0;
 
         foreach($file as $key => $line) {
 
@@ -101,6 +102,7 @@ class DsjData {
                 $round1 = $line[4];
                 $round2 = 0;
                 $result = $line[5];
+                $qualified = $line[6];
             }
 
             if( $previous_jumper_result == $result ) {
@@ -120,6 +122,7 @@ class DsjData {
                 'round2' => $round2,
                 'result' => $result,
                 'previous_jumper_result' => $previous_jumper_result,
+                'qualified' => $qualified ? $qualified : null,
             );
 
             $iteration++;

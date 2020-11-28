@@ -1,0 +1,57 @@
+﻿Puchar Świata 2020-11-27
+Garmisch-Partenkirchen HS140 Wyniki kwalifikacji (KO)
+
+Poz.  Nr    Zawodnik                 Kraj          Długość       Punkty Zakwalifik.
+1.    22    Adam Małysz              POL           140.0 m        144.5           q
+2.    42    Tom Hilde                NOR           138.0 m        139.4           q
+3.    34    Daniel-Andre Tande       NOR           136.0 m        138.3           q
+4.    33    Martin Schmitt           GER           134.5 m        135.1           q
+5.    50    Matti Hautamaeki         FIN           134.5 m        134.6           Q
+6.    31    Martin Hoellwarth        AUT           135.5 m        133.9           q
+7.    46    Jakub Janda              CZE           134.0 m        133.7           Q
+8.    52    Sven Hannawald           GER           132.5 m        133.5           Q
+9.    32    Masahiko Harada          JPN           133.0 m        133.4           q
+10.   24    Anders Jacobsen          NOR           133.5 m        132.8           q
+11.   7     Roar Ljoekelsoey         NOR           134.0 m        132.7           q
+12.   28    Tommy Ingebrigtsen       NOR           135.0 m        132.0           q
+13.   3     Dieter Thoma             GER           132.0 m        131.1           q
+14.   14    Nicolas Dessum           FRA           136.5 m        130.7           q
+15.   37    Lasse Ottesen            NOR           132.5 m        130.5           q
+16.   26    Dmitri Vassiliev         RUS           135.0 m        130.0           q
+17.   35    Toni Nieminen            FIN           131.0 m        129.3           q
+18.   40    Takanobu Okabe           JPN           131.0 m        128.8           q
+19.   49    Robert Kranjec           SLO           134.0 m        128.7           Q
+20.   45    Stefan Horngacher        AUT           131.5 m        128.7           Q
+21.   21    Andreas Goldberger       AUT           129.5 m        127.1           q
+22.   30    Jernej Damjan            SLO           130.5 m        126.9           q
+23.   43    Michael Uhrmann          GER           130.0 m        126.5           q
+24.   10    Tami Kiuru               FIN           130.0 m        126.5           q
+25.   39    Ari-Pekka Nikkola        FIN           129.0 m        126.2           q
+26.   44    Wolfgang Loitzl          AUT           129.5 m        126.1           Q
+27.   18    Severin Freund           GER           129.0 m        125.2           q
+28.   16    Daiki Ito                JPN           130.0 m        124.5           q
+29.   41    Kamil Stoch              POL           129.0 m        123.7           q
+30.   1     Johan Remen Evensen      NOR           129.0 m        123.7           q
+31.   36    Gregor Schlierenzauer    AUT           129.5 m        123.1           q
+32.   47    Janne Ahonen             FIN           128.5 m        122.8           Q
+33.   25    Ville Kantee             FIN           128.0 m        122.4           q
+34.   17    Andreas Kofler           AUT           128.0 m        121.9           q
+35.   2     Michael Neumayer         GER           127.0 m        121.6           q
+36.   27    Jan Matura               CZE           127.0 m        121.1           q
+37.   13    Anders Bardal            NOR           128.0 m        119.4           q
+38.   4     Roberto Cecon            ITA           126.0 m        118.8           q
+39.   9     Hideharu Miyahira        JPN           126.0 m        117.8           q
+40.   15    Peter Prevc              SLO           125.5 m        117.4           q
+41.   38    Thomas Morgenstern       AUT           124.0 m        116.2           q
+42.   19    Peter Zonta              SLO           125.5 m        115.9           q
+43.   29    Noriaki Kasai            JPN           124.0 m        114.2           q
+44.   53    Jani Soininen            FIN           123.0 m        113.4           Q
+45.   23    Martin Koch              AUT           123.5 m        112.8           q
+46.   11    Emmanuel Chedal          FRA           123.0 m        111.9           q
+47.   12    Risto Jussilainen        FIN           120.5 m        108.9           q
+48.   48    Kazuyoshi Funaki         JPN           120.5 m        105.9           Q
+49.   51    Andreas Widhoelzl        AUT           120.5 m        104.9           Q
+50.   8     Veli-Matti Lindstroem    FIN           116.5 m        100.7           q
+51.   20    Primoż Peterka           SLO           117.0 m        100.1            
+52.   6     Domen Prevc              SLO           115.5 m         95.9            
+53.   5     Simon Ammann             SUI           114.5 m         91.1            

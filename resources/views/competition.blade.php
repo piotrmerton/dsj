@@ -12,7 +12,10 @@
 			<h1>Competition view {{ $competition['name'] }}</h1>
 			<small>resources/views/competition</small>
 
+
 			@include('components.standings.competition', ['competition' => $competition])
+
+			@include('components.standings.qualifications', ['competition' => $competition])
 
 			@include('components.standings.tournament', ['data' => $tournament_standings])
 

@@ -17,7 +17,7 @@ class Competition {
 	}
 
     /**
-     * load single competition
+     * load single competition meta and results
      */
     public static function loadCompetition($id_tournament, $id_competition) : array {
 
@@ -37,12 +37,31 @@ class Competition {
         	array(
         		'tournament' => $tournament_meta,
         		'results' => $results,
+                'qualifications' => self::loadQualificationsResults($id_tournament, $id_competition),
         	),
         );
 
         return $competition_data;
 
     }
+
+
+    /**
+     * load qualification standings
+     * TO DO: create and move to Qualification Model?
+     */
+    public static function loadQualificationsResults($id_tournament, $id_competition) : array {
+
+        $path = DsjData::$dir_tournaments.'/'.$id_tournament;
+
+        // load DSJ4 stats file 
+        $file = file($path.'/qualifications/'.$id_competition.'.txt');
+
+        $results = DsjData::parseDsjStatResults($file, 'qualifications');
+
+        return $results;
+
+    }    
 
 }
 

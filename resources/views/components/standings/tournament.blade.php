@@ -1,4 +1,4 @@
-<section class="standings-component standings--tournament">
+<div class="standings-component standings--tournament">
 
 	<h2 class="standings__title">
 		{!! __('Klasyfikacja generalna 
@@ -36,4 +36,4 @@
 
 	</table>
 
-</section>
+</div>
