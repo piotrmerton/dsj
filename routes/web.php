@@ -27,7 +27,7 @@ Route::get('/', function () {
 
 Route::get('tournament/{id_tournament}', [TournamentController::class, 'display'])->name('tournament');
 
-Route::get('tournaments', [TournamentsController::class, 'display']);
+Route::get('tournaments', [TournamentsController::class, 'display'])->name('tournaments');
 
 Route::get('competition/{id_tournament}/{id_competition}', [CompetitionController::class, 'display'])->name('competition');
 

@@ -2,6 +2,8 @@
 <small>resources/views/tournament</small>
 
 
+@include('components.breadcrumbs')
+
 <h1>Calendar</h1>
 <ol>
 
