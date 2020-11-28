@@ -52,6 +52,7 @@ class DsjData {
         }
 
         $header = array(
+            'name' => trim($hillname) . ' ' . $hill[$hs_position],
             'venue' => array(
                 'city' => trim($hillname),
                 'hs' => $hill[$hs_position]

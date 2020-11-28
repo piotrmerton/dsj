@@ -9,7 +9,7 @@
 	<dt>{{ __('Pozycje w poszczególnych konkursach') }}:</dt>
 	<dd>
 		@foreach( $data['stats']['competitions'] as $competition)
-			<a href="{{ $competition['url'] }}" title="{{ $competition['venue']['city'] }} {{ $competition['venue']['hs'] }}">{{ $competition['position'] }}</a>@if (!$loop->last), @endif
+			<a href="{{ $competition['url'] }}" title="{{ $competition['name'] }}">{{ $competition['position'] }}</a>@if (!$loop->last), @endif
 		@endforeach
 	</dd>
 

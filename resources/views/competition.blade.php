@@ -9,7 +9,7 @@
 	<div class="content__main content--competition">
 		<div class="viewport">
 
-			<h1>Competition view {{ $competition['venue']['city'] }} {{ $competition['venue']['hs'] }}</h1>
+			<h1>Competition view {{ $competition['name'] }}</h1>
 			<small>resources/views/competition</small>
 
 

@@ -73,6 +73,7 @@ class Jumper {
 
             $stats['competitions'][$id_competition] = array(
                 'id' => $id_competition,
+                'name' => $city . ' ' . $hs,
                 'venue' => array(
                     'city' => $city,
                     'hs' => $hs,

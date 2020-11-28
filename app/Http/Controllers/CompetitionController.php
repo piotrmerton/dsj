@@ -21,7 +21,7 @@ class CompetitionController extends Controller
 
         $breadcrumbs = new Breadcrumbs();
         $breadcrumbs->add( $tournament_standings['tournament']['name'], route('tournament', $id_tournament) );
-        $breadcrumbs->add( $competition['venue']['city'], false);
+        $breadcrumbs->add( $competition['name'], false);
 
         //dd($tournament_standings);
 
