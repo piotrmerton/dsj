@@ -214,7 +214,27 @@ class DsjData {
                     foreach($previous_standings['standings']['results'] as $previous_results) {
 
                         if( $current_results['name'] === $previous_results['name']) {
-                            $standings[$key]['previous_position'] = $previous_results['real_position'];
+                            
+
+                            //tournament position change
+                            $previous_position = (int)$previous_results['real_position'];
+                            $current_position = (int)$current_results['real_position'];
+                            $change = $previous_position - $current_position;
+
+                            if($previous_position > $current_position) {
+                                //previosly jumper had worse position
+                                $trend = 'positive';
+                            } elseif ($previous_position < $current_position) {
+                                //previosly jumper had better position
+                                $trend = "negative";
+                            } elseif ($previous_position == $current_position) {
+                                $trend = "neutral";
+                            }
+
+                            $standings[$key]['previous_position'] = $previous_position;
+                            $standings[$key]['change'] = abs($change);
+                            $standings[$key]['trend'] = $trend;
+
                             break;
                         }
 
