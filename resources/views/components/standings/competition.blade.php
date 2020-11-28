@@ -1,5 +1,9 @@
 <section class="standings-component standings--competition">
 
+	<h2 class="standings__title">
+		{{ __('Wyniki konkursu :competition', ['competition' => $competition['name']]) }}
+	</h2>
+
 	<table class="standings__table table--competition">
 		<thead>
 			<tr>
