@@ -16,7 +16,8 @@ class Standings {
         // load DSJ4 stats file 
         $file = file($path.'/standings/'.$id_competition.'.txt');
 
-        $standings = DsjData::parseDsjStatStandings($file);
+        $standings = DsjData::parseDsjStatStandingsHeader($file);
+        $standings['results'] = DsjData::parseDsjStatStandings($file);
 
         $tournament_meta = Tournament::loadTournamentMeta($id_tournament);
 

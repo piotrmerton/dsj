@@ -15,7 +15,7 @@ class StandingsController extends Controller
 
         $data = Standings::loadSingleStandings($id_tournament, $id_competition);
 
-        //dd($standings);
+        //dd($data);
 
         return view('standings', 
             ['data' => $data]

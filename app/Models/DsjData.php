@@ -11,6 +11,9 @@ class DsjData {
 	public static $dir_tournaments = PATH . '\data\tournaments'; 
 
 
+    /**
+     * parse Header of single Competition Standings file
+     */
     public static function parseDsjStatHeader($file) : array {
 
         $date = preg_split('/\s+/', $file[0]);
@@ -62,7 +65,9 @@ class DsjData {
 
     }
 
-
+    /**
+     * parse Results of single Competition Standings file
+     */
     public static function parseDsjStatResults($file, $type) : array {
 
         $real_position = 1;
@@ -128,6 +133,28 @@ class DsjData {
 
     }
 
+
+    /**
+     * parse Header of Tournament Standings file
+     */
+    public static function parseDsjStatStandingsHeader($file) : array {
+
+        $date = preg_split('/\s+/', $file[0]);
+        $stage = preg_split('/\s+/', $file[1]);
+
+        $header = array(
+            'stage' => $stage[2],
+            'date' => strtotime($date[2]),
+
+        );
+
+        return $header;
+
+    }
+
+    /**
+     * parse Results of Tournament Standings file
+     */
     public static function parseDsjStatStandings($file) : array {
 
         $real_position = 1;
@@ -180,8 +207,6 @@ class DsjData {
         return $standings;
 
     }
-
-
 
 
 }
