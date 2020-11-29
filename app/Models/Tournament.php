@@ -210,7 +210,7 @@ class Tournament {
 
         $competitions = self::loadTournamentCompetitionsResults($id_tournament);
 
-        $stats['final_rounds'] = array();
+        $stats['final_round'] = array();
         $stats['top_three'] = array();
         $stats['wins'] = array();
 
@@ -224,8 +224,8 @@ class Tournament {
 
                 $name = $result['name'];
 
-                if( !array_key_exists( $name, $stats['final_rounds'] ) ) {
-                    $stats['final_rounds'][$name] = 0;
+                if( !array_key_exists( $name, $stats['final_round'] ) ) {
+                    $stats['final_round'][$name] = 0;
                 }
 
                 if( !array_key_exists( $name, $stats['top_three'] ) ) {
@@ -238,13 +238,13 @@ class Tournament {
 
                 if($result['real_position'] <= 3) $stats['top_three'][$name]++;
                 if($result['real_position'] == 1) $stats['wins'][$name]++;
-                if($result['real_position'] <= 30) $stats['final_rounds'][$name]++;
+                if($result['real_position'] <= 30) $stats['final_round'][$name]++;
 
             }   
 
         }
 
-        array_multisort($stats['final_rounds'], SORT_DESC);
+        array_multisort($stats['final_round'], SORT_DESC);
         array_multisort($stats['top_three'], SORT_DESC);
         array_multisort($stats['wins'], SORT_DESC);        
 

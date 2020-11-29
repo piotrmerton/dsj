@@ -26,6 +26,9 @@
 	<dt>{{ __('Ilość zwycięstw') }}:</dt>
 	<dd>{{ $data['stats']['wins'] }}</dd>	
 
+	<dt>{{ __('Ilość razy w finałowej rundzie') }}:</dt>
+	<dd>{{ $data['stats']['final_round'] }}</dd>	
+
 
 
 </dl>
