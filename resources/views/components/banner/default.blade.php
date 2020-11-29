@@ -7,5 +7,11 @@
             @show
         </div>
 
+        <figure class="banner__cover cover cover--overlay">
+        	@section('banner__cover')
+
+        	@show
+        </figure>
+
     </div><!-- /viewport -->
 </section>

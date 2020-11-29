@@ -10,6 +10,8 @@
 
 	color: #fff;
 
+	position: relative;
+
 	h1 {
 		font-size: 4em;
 	}
@@ -19,6 +21,11 @@
 		text-decoration: underline;
 	}
 
+}
+
+.banner__content {
+	position: relative;
+	z-index: 2; //above cover
 }
 
 .banner__meta {

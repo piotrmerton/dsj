@@ -17,3 +17,10 @@
 	</ul>
 
 @endsection
+
+
+@section('banner__cover')
+	@if(file_exists('img/banner/'.$competition['venue']['city'].'.webp')) 
+		<img src="{{ asset('img/banner/'.$competition['venue']['city'].'.webp') }}" />
+	@endif
+@endsection

@@ -13,7 +13,7 @@
 
 			@include('components.breadcrumbs')
 
-			<h1>{{ __('Wyniki konkursu') }} {{ $competition['name'] }}</h1>
+			{{-- <h1>{{ __('Wyniki konkursu') }} {{ $competition['name'] }}</h1> --}}
 
 			<div class="ui-tabs tabs--competition">
 				<nav class="tabs__nav">
