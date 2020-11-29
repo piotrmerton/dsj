@@ -16,6 +16,19 @@
     display: none;
 }
 
+.tabs__nav {
+    .nav__list {
+        display: flex;
+        justify-content: center;
+        margin: 1rem 0;
+
+        .list__item {
+            margin: 0 .5rem;
+        }
+    }    
+}
+
+
 .tabs__contents {
     .item--tab {
         &:not(.tab--open) {
