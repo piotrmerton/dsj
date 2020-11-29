@@ -73,7 +73,7 @@ class DsjData {
     /**
      * parse Results of single Competition Standings file
      */
-    public static function parseDsjStatResults(array $file, string $type) : array {
+    public static function parseDsjStatResults(array $file, string $type = 'final') : array {
 
         $real_position = 1;
         $iteration = 1;

@@ -75,8 +75,13 @@ class Tournament {
 
     }
 
-    /** load all Tournament competitions **/
-    public static function loadTournamentCompetitions($id_tournament, $results = false) : array {
+    /**
+     * Load all Tournament competitions files and decide how to parse it. Sort them by ID. Reads whole /competitions/ dir.
+     * @param $id_tournament
+     * @param $results - parse and return Stat results
+     * @param $header -- parse and return Stat header (meta info: Competition name, country, hill size)
+     **/
+    public static function loadTournamentCompetitions(int $id_tournament, bool $results = false, bool $header = true) : array {
 
         $path = DsjData::$dir_tournaments.'/'.$id_tournament.'/competitions';
 
@@ -86,21 +91,18 @@ class Tournament {
             while (false !== ($item = readdir($handle))) {
                 if ($item != "." && $item != ".." && $item != "index.php") {
                     
-
                     // load DSJ4 stats file 
                     $file = file($path .'/'. $item);
 
-                    $competition_data = DsjData::parseDsjStatHeader($file);
+                    if($header) $competition_data = DsjData::parseDsjStatHeader($file);
                     $competition_data['id'] = str_replace('.txt', '', $item);
 
                     if( $results ) {
-                    	$competition_data['results'] = DsjData::parseDsjStatResults($file, $competition_data['type']);
+                    	$competition_data['results'] = DsjData::parseDsjStatResults($file);
                     }
 
                     $tournament_comps[] = $competition_data;
-
                 }
-
             }
 
             closedir($handle);
@@ -116,8 +118,12 @@ class Tournament {
 
     }
 
-    //loadTournamentCompetitions but light (without parsing header, sorting etc)
-    public static function loadTournamentCompetitionsResults($id_tournament) {
+    /**
+     * Load all Tournament competitions files to and parse results
+     * This is similar to Tournament::loadTournamentCompetitions but more lightweight, since we don't parse Stats headers or sort array. Probably both methods should be merged and use arguments as settings 
+     * @param $id_tournament
+     **/    
+    public static function loadTournamentCompetitionsResults($id_tournament) : array {
         
         $path = DsjData::$dir_tournaments.'/'.$id_tournament.'/competitions';
 
@@ -130,7 +136,7 @@ class Tournament {
                     // load DSJ4 stats file 
                     $file = file($path .'/'. $item);
 
-                    $competition_data['results'] = DsjData::parseDsjStatResults($file, 'final');
+                    $competition_data['results'] = DsjData::parseDsjStatResults($file);
                     
                     $tournament_comps[] = $competition_data;
 
@@ -146,7 +152,10 @@ class Tournament {
 
     }
 
-    /** load all Tournament standings **/
+    /**
+     * Load all Tournament standings files and sort them by ID. Reads whole /standings/ dir.
+     * @param $id_tournament
+     **/    
     public static function loadTournamentStandings($id_tournament) : array {
 
         $path = DsjData::$dir_tournaments.'/'.$id_tournament.'/standings';
@@ -157,7 +166,6 @@ class Tournament {
             while (false !== ($item = readdir($handle))) {
                 if ($item != "." && $item != ".." && $item != "index.php") {
                     
-
                     // load DSJ4 stats file 
                     $file = file($path .'/'. $item);
 
@@ -169,7 +177,6 @@ class Tournament {
                         'standings' => $standings,
                         'id_competition' => $id_competition,
                     );
-
 
                 }
 
@@ -188,8 +195,11 @@ class Tournament {
 
     }    
 
-
-    // to do: move to Stats Model?
+    /**
+     * Get Tournament Stats (who has the most wins, most podiums etc). Load all Tournament competitions files (reads whole /competitions/ dir, but parse only results which is a little bit more lightweight) 
+     * TO DO: create and move to Stats Model?
+     * @param $id_tournament
+     **/    
     public static function getStats($id_tournament) {
 
         $competitions = self::loadTournamentCompetitionsResults($id_tournament);

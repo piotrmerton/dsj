@@ -29,3 +29,5 @@
 
 
 </dl>
+
+{{ (microtime(true) - LARAVEL_START) }}

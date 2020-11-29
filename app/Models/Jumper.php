@@ -32,9 +32,8 @@ class Jumper {
         $stats['third'] = 0;
         $stats['final_round'] = 0;
 
-        //load full tournament (all competitions files, beware of performance; compare: https://www.sitepoint.com/performant-reading-big-files-php/)
+        //load full tournament (all competitions files, beware of performance; compare: https://www.sitepoint.com/performant-reading-big-files-php/ - do we need parse competitions header or only results?)
         $tournament_competitions = Tournament::loadTournamentCompetitions($id_tournament, true);
-        
 
         foreach( $tournament_competitions as $competition ) {
 
@@ -86,7 +85,7 @@ class Jumper {
                     'position' => $position,
                     'position_tournament' => $tournament_standings[$id_competition],
                 );
-                $stats['standings'] = $tournament_standings;              
+                //$stats['standings'] = $tournament_standings;              
             }
 
 
@@ -103,9 +102,8 @@ class Jumper {
 
 
         //load full tournament (all competitions files, beware of performance; compare: https://www.sitepoint.com/performant-reading-big-files-php/)
-        $tournament_standings = Tournament::loadTournamentStandings($id_tournament, true);
+        $tournament_standings = Tournament::loadTournamentStandings($id_tournament, true, false);
 
-        $positions = array();
 
         foreach( $tournament_standings as $standings ) {
 
