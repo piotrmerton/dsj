@@ -17,6 +17,7 @@
 				<td>{{ __('Kraj') }}</td>
 				<td class="result">{{ __('Punkty') }}</td>
 				<td class="result">{{ __('Strata') }}</td>
+				<td class="result">{{ __('Występów') }}</td>
 			</tr>
 		</thead>
 		<tbody>
@@ -30,6 +31,7 @@
 					<td><img class="ui-ico ico--flag" src="{{ asset('img/flags/'.$row['country'].'.svg') }}" alt="{{ $row['country'] }}"/></td>
 					<td class="result">{{ $row['points'] }}</td>
 					<td class="result">{{ $row['difference'] }}</td>
+					<td class="result">{{ $data['tournament']['stats']['final_rounds'][$row['name']] }}</td>
 				</tr>
 			@endforeach
 		</tbody>

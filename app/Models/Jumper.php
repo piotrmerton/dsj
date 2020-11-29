@@ -11,17 +11,17 @@ class Jumper {
     public $country;
     public $stats;
 
-    public function __construct($name, $id_tournament) {
+    public function __construct($name, $id_tournament, $trends = false) {
 
         if( !isset($id_tournament)  ) die ('Error: no tournament provided');
         if( !isset($name)  ) die ('Error: no name provided');
 
-        $this->stats = $this->getCompetitionsStats($id_tournament, $name);
+        $this->stats = $this->getCompetitionsStats($id_tournament, $name, $trends);
 
 
     }
 
-    private function getCompetitionsStats($id_tournament, $name) : array {
+    private function getCompetitionsStats($id_tournament, $name, $trends = false) : array {
 
         $stats['tournament'] = Tournament::loadTournamentMeta($id_tournament);
         $stats['competitions'] = NULL;
@@ -30,11 +30,11 @@ class Jumper {
         $stats['wins'] = 0;
         $stats['second'] = 0;
         $stats['third'] = 0;
-
+        $stats['final_round'] = 0;
 
         //load full tournament (all competitions files, beware of performance; compare: https://www.sitepoint.com/performant-reading-big-files-php/)
         $tournament_competitions = Tournament::loadTournamentCompetitions($id_tournament, true);
-        $tournament_standings = self::getTournamentStats($id_tournament, $name);
+        
 
         foreach( $tournament_competitions as $competition ) {
 
@@ -55,6 +55,7 @@ class Jumper {
                     if( $results['real_position'] <= 3) $stats['top_three']++;
                     if( $results['real_position'] == 2) $stats['second']++;
                     if( $results['real_position'] == 1) $stats['wins']++;
+                    if( $results['real_position'] <= 30) $stats['final_round']++;
 
                     $qualified = true;
 
@@ -71,18 +72,24 @@ class Jumper {
                 $position = 0;
             }
 
-            $stats['competitions'][$id_competition] = array(
-                'id' => $id_competition,
-                'name' => $city . ' ' . $hs,
-                'venue' => array(
-                    'city' => $city,
-                    'hs' => $hs,
-                ),
-                'url' => route('competition', array( 'id_tournament' => $id_tournament, 'id_competition' => $id_competition ) ),
-                'position' => $position,
-                'position_tournament' => $tournament_standings[$id_competition],
-            );
-            $stats['standings'] = $tournament_standings;
+            /* load history of positions in Competitions and in Tournament after each Competition */
+            if($trends) {
+                $tournament_standings = self::getTournamentStats($id_tournament, $name);
+                $stats['competitions'][$id_competition] = array(
+                    'id' => $id_competition,
+                    'name' => $city . ' ' . $hs,
+                    'venue' => array(
+                        'city' => $city,
+                        'hs' => $hs,
+                    ),
+                    'url' => route('competition', array( 'id_tournament' => $id_tournament, 'id_competition' => $id_competition ) ),
+                    'position' => $position,
+                    'position_tournament' => $tournament_standings[$id_competition],
+                );
+                $stats['standings'] = $tournament_standings;              
+            }
+
+
 
         }
 

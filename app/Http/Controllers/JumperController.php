@@ -14,7 +14,7 @@ class JumperController extends Controller
     {
 
 
-    	$jumper = new Jumper($name, $id_tournament);
+    	$jumper = new Jumper($name, $id_tournament, true);
 
         $data = array(
         	'name' => $jumper->name,

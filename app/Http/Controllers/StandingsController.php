@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Standings;
 use App\Models\Tournament;
+use App\Models\Jumper;
 use App\Breadcrumbs;
 
 class StandingsController extends Controller

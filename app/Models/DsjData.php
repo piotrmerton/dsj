@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Jumper;
 use App\Models\Hill;
 
 define('PATH', base_path() ); //TO DO: https://stackoverflow.com/questions/42155536/what-is-the-best-practice-for-adding-constants-in-laravel-long-list
@@ -195,10 +196,10 @@ class DsjData {
             if($iteration == 1) $top_score = $points;
 
             $standings[] = array(
+                'name' => $name,
+                'country' => $country,                
                 'real_position' => $real_position,
                 'position' => $position,
-                'name' => $name,
-                'country' => $country,
                 'points' => $points,
                 'difference' => $previous_jumper_result != 0 ? '-'.($top_score - $points) : '',
                 'previous_position' => null,
@@ -211,7 +212,7 @@ class DsjData {
             //save previous jumper results in order to save ex aequo position
             $previous_jumper_result = $points;
 
-
+            //trend in Tournament
             if(isset($id_tournament) && isset($id_competition) && $id_competition > 1 && $compare == true) {
 
                 $previous_standings = Standings::loadSingleStandings($id_tournament, (int)$id_competition - 1, false);

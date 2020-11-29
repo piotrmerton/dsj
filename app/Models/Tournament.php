@@ -75,6 +75,7 @@ class Tournament {
 
     }
 
+    /** load all Tournament competitions **/
     public static function loadTournamentCompetitions($id_tournament, $results = false) : array {
 
         $path = DsjData::$dir_tournaments.'/'.$id_tournament.'/competitions';
@@ -130,7 +131,7 @@ class Tournament {
                     // load DSJ4 stats file 
                     $file = file($path .'/'. $item);
 
-                    $standings = DsjData::parseDsjStatStandings($file);
+                    $standings = DsjData::parseDsjStatStandings($file, $id_tournament);
                     $id_competition = str_replace('.txt', '', $item);
 
 
@@ -155,6 +156,53 @@ class Tournament {
 
         return $standings_history;
 
-    }     
+    }    
+
+
+    // to do: move to Stats Model?
+    public static function getStats($id_tournament) {
+
+        $competitions = self::loadTournamentCompetitions($id_tournament, true);
+
+        $stats['final_rounds'] = array();
+        $stats['top_three'] = array();
+        $stats['wins'] = array();
+
+        foreach($competitions as $competition) {
+
+            foreach($competition['results'] as $result) {
+
+                $name = $result['name'];
+
+                if( !array_key_exists( $name, $stats['final_rounds'] ) ) {
+                    $stats['final_rounds'][$name] = 0;
+                } else {
+                    if($result['real_position'] <= 30) $stats['final_rounds'][$name]++;
+                }
+
+                if( !array_key_exists( $name, $stats['top_three'] ) ) {
+                    $stats['top_three'][$name] = 0;
+                } else {
+                    if($result['real_position'] <= 3) $stats['top_three'][$name]++;
+                }                
+                
+                if( !array_key_exists( $name, $stats['wins'] ) ) {
+                    $stats['wins'][$name] = 0;
+                } else {
+                    if($result['real_position'] == 1) $stats['wins'][$name]++;
+                }      
+
+                array_multisort($stats['final_rounds'], SORT_DESC);
+                array_multisort($stats['top_three'], SORT_DESC);
+                array_multisort($stats['wins'], SORT_DESC);                    
+                
+
+            }
+
+        }
+
+        return $stats;
+
+    } 
 
 }

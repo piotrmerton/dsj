@@ -27,6 +27,22 @@ class Standings {
         );
 
 
+        //delete -> this is is too heavy
+        // foreach($standings['results'] as $key => $results) {
+
+        //     $jumpers[] = $results['name'];
+
+        //     $obj = new Jumper($results['name'], $id_tournament);
+
+        //     $standings['results'][$key]['stats'] = $obj->stats;
+
+        // }        
+
+        //dd($standings['results']);
+
+        $data['tournament']['stats'] = Tournament::getStats($id_tournament);
+
+
         return $data;
 
     }
