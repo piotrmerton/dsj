@@ -27,7 +27,7 @@
 						<span class="position__trend trend--{{ $row['trend'] }}"></span>
 					</td>
 					<td class="name"><a href="{{ url('/jumper/'.$row['name'].'/'.$data['tournament']['id']) }}">{{ $row['name'] }}</a></td>
-					<td><img src="{{ asset('img/flags/'.$row['country'].'.svg') }}" alt="{{ $row['country'] }}"/></td>
+					<td><img class="ui-ico ico--flag" src="{{ asset('img/flags/'.$row['country'].'.svg') }}" alt="{{ $row['country'] }}"/></td>
 					<td class="result">{{ $row['points'] }}</td>
 					<td class="result">{{ $row['difference'] }}</td>
 				</tr>

@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\DsjData;
+use App\Models\Hill;
 use Symfony\Component\Yaml\Yaml; //https://stackoverflow.com/a/54129307
 
 
@@ -65,9 +66,8 @@ class Tournament {
 
         $path = DsjData::$dir_tournaments.'/'.$id_tournament;
 
-        $file = file_get_contents($path . '/'. 'data.yml');
-
-        $tournament_meta = Yaml::parse($file);
+        $tournament_meta = Yaml::parseFile($path . '/'. 'data.yml');
+        
         $tournament_meta['id'] = $id_tournament;
         $tournament_meta['url'] = route('tournament', array( 'id_tournament' => $id_tournament));
 
@@ -91,6 +91,8 @@ class Tournament {
 
                     $competition_data = DsjData::parseDsjStatHeader($file);
                     $competition_data['id'] = str_replace('.txt', '', $item);
+
+                    $competition_data['country'] = Hill::getCountry( $competition_data['venue']['city'] );
 
                     if( $results ) {
                     	$competition_data['results'] = DsjData::parseDsjStatResults($file, $competition_data['type']);

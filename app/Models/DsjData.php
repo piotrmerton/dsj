@@ -7,9 +7,8 @@ define('PATH', base_path() ); //TO DO: https://stackoverflow.com/questions/42155
 
 class DsjData {
     
-
+    public static $dir_data = PATH . '\data';
 	public static $dir_tournaments = PATH . '\data\tournaments'; 
-
 
     /**
      * parse Header of single Competition Standings file
