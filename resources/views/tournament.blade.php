@@ -4,19 +4,25 @@
 
 @section('content')
 
-	<h1>Tournament {{ $tournament['name'] }}</h1>
+	@include('components.banner.tournament')
 
-	@include('components.breadcrumbs')
-
-	<div class="content__main content--competition">
+	<div class="content__main content--tournament">
 		<div class="viewport">
 
+			@include('components.breadcrumbs')
 
-			@include('components.calendar')
+			<div class="content__main content--competition">
+				<div class="viewport">
 
-			@include('components.standings.tournament', ['data' => $standings])
+					@include('components.calendar')
+
+					@include('components.standings.tournament', ['data' => $standings])
+				</div>
+			</div>
 		</div>
 	</div>
+
+
 
 
 @endsection

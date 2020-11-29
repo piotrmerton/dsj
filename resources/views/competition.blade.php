@@ -5,9 +5,9 @@
 @section('content')
 
 
-	<div class="content__main content--competition">
+	@include('components.banner.competition')
 
-		@include('components.banner.competition')
+	<div class="content__main content--competition">
 
 		<div class="viewport">
 
