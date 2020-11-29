@@ -116,6 +116,36 @@ class Tournament {
 
     }
 
+    //loadTournamentCompetitions but light (without parsing header, sorting etc)
+    public static function loadTournamentCompetitionsResults($id_tournament) {
+        
+        $path = DsjData::$dir_tournaments.'/'.$id_tournament.'/competitions';
+
+        if ($handle = opendir($path)) {
+
+            /* loop over the directory. */
+            while (false !== ($item = readdir($handle))) {
+                if ($item != "." && $item != ".." && $item != "index.php") {
+                    
+                    // load DSJ4 stats file 
+                    $file = file($path .'/'. $item);
+
+                    $competition_data['results'] = DsjData::parseDsjStatResults($file, 'final');
+                    
+                    $tournament_comps[] = $competition_data;
+
+                }
+
+            }
+
+            closedir($handle);
+
+        }
+
+        return $tournament_comps;
+
+    }
+
     /** load all Tournament standings **/
     public static function loadTournamentStandings($id_tournament) : array {
 
@@ -162,7 +192,7 @@ class Tournament {
     // to do: move to Stats Model?
     public static function getStats($id_tournament) {
 
-        $competitions = self::loadTournamentCompetitions($id_tournament, true);
+        $competitions = self::loadTournamentCompetitionsResults($id_tournament);
 
         $stats['final_rounds'] = array();
         $stats['top_three'] = array();
@@ -192,14 +222,13 @@ class Tournament {
                     if($result['real_position'] == 1) $stats['wins'][$name]++;
                 }      
 
-                array_multisort($stats['final_rounds'], SORT_DESC);
-                array_multisort($stats['top_three'], SORT_DESC);
-                array_multisort($stats['wins'], SORT_DESC);                    
-                
-
             }
 
         }
+
+        array_multisort($stats['final_rounds'], SORT_DESC);
+        array_multisort($stats['top_three'], SORT_DESC);
+        array_multisort($stats['wins'], SORT_DESC);        
 
         return $stats;
 
