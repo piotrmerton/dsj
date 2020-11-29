@@ -30,7 +30,10 @@ class Jumper {
         $stats['wins'] = 0;
         $stats['second'] = 0;
         $stats['third'] = 0;
+        $stats['top_ten'] = 0;
+        $stats['top_six'] = 0;
         $stats['final_round'] = 0;
+        $stats['current_position'] = 0;
 
         //load full tournament (all competitions files, beware of performance; compare: https://www.sitepoint.com/performant-reading-big-files-php/ - do we need parse competitions header or only results?)
         $tournament_competitions = Tournament::loadTournamentCompetitions($id_tournament, true);
@@ -52,8 +55,11 @@ class Jumper {
                     $this->country = $results['country'];
 
                     if( $results['real_position'] <= 3) $stats['top_three']++;
+                    if( $results['real_position'] == 3) $stats['third']++;
                     if( $results['real_position'] == 2) $stats['second']++;
                     if( $results['real_position'] == 1) $stats['wins']++;
+                    if( $results['real_position'] <= 10) $stats['top_ten']++;
+                    if( $results['real_position'] <= 6) $stats['top_six']++;
                     if( $results['real_position'] <= 30) $stats['final_round']++;
 
                     $qualified = true;
@@ -74,6 +80,7 @@ class Jumper {
             /* load history of positions in Competitions and in Tournament after each Competition */
             if($trends) {
                 $tournament_standings = self::getTournamentStats($id_tournament, $name);
+
                 $stats['competitions'][$id_competition] = array(
                     'id' => $id_competition,
                     'name' => $city . ' ' . $hs,
@@ -83,10 +90,12 @@ class Jumper {
                     ),
                     'url' => route('competition', array( 'id_tournament' => $id_tournament, 'id_competition' => $id_competition ) ),
                     'position' => $position,
-                    'position_tournament' => $tournament_standings[$id_competition],
+                    'position_tournament' => $tournament_standings[$id_competition]['position'],
                 );
-                //$stats['standings'] = $tournament_standings;              
+                              
             }
+            $stats['current_position'] = $tournament_standings[$id_competition]['position'];
+            $stats['points'] = $tournament_standings[$id_competition]['points'];
 
 
 
@@ -126,11 +135,15 @@ class Jumper {
 
             if( $found ) {
                 $position = $results['real_position'];
+                $points = $results['points'];
             } else {
                 $position = 0;
+                $points = 0;
             }
 
-            $data[$id_competition] = $position;
+            // we are looking only for current position and current points so it's ok that each iteration will overwrite this, since competitions are already sorted in Tournament::loadTournamentStandings
+            $data[$id_competition]['position'] = $position;
+            $data[$id_competition]['points'] = $points;
 
         }
 
