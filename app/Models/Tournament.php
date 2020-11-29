@@ -120,7 +120,7 @@ class Tournament {
 
     /**
      * Load all Tournament competitions files to and parse results
-     * This is similar to Tournament::loadTournamentCompetitions but more lightweight, since we don't parse Stats headers or sort array. Probably both methods should be merged and use arguments as settings 
+     * This is similar to Tournament::loadTournamentCompetitions but more lightweight, since we don't parse Stats headers. Probably both methods should be merged and use arguments as settings 
      * @param $id_tournament
      **/    
     public static function loadTournamentCompetitionsResults($id_tournament) : array {
@@ -136,9 +136,10 @@ class Tournament {
                     // load DSJ4 stats file 
                     $file = file($path .'/'. $item);
 
+                    $competition_data['id'] = str_replace('.txt', '', $item);
                     $competition_data['results'] = DsjData::parseDsjStatResults($file);
                     
-                    $tournament_comps[] = $competition_data;
+                    $tournament_comps[$competition_data['id']] = $competition_data;
 
                 }
 
@@ -147,6 +148,10 @@ class Tournament {
             closedir($handle);
 
         }
+
+        usort($tournament_comps, function($a, $b) {
+            return $a['id'] <=> $b['id'];
+        });
 
         return $tournament_comps;
 
@@ -199,8 +204,9 @@ class Tournament {
      * Get Tournament Stats (who has the most wins, most podiums etc). Load all Tournament competitions files (reads whole /competitions/ dir, but parse only results which is a little bit more lightweight) 
      * TO DO: create and move to Stats Model?
      * @param $id_tournament
+     * @param $last_competition_id - get stats only to a certain competition 
      **/    
-    public static function getStats($id_tournament) {
+    public static function getStats($id_tournament, $last_competition_id = false) {
 
         $competitions = self::loadTournamentCompetitionsResults($id_tournament);
 
@@ -208,7 +214,11 @@ class Tournament {
         $stats['top_three'] = array();
         $stats['wins'] = array();
 
+        //dd($competitions);
+
         foreach($competitions as $competition) {
+
+            if(isset($last_competition_id) && (int)$competition['id'] > (int)$last_competition_id) break;
 
             foreach($competition['results'] as $result) {
 
@@ -216,29 +226,29 @@ class Tournament {
 
                 if( !array_key_exists( $name, $stats['final_rounds'] ) ) {
                     $stats['final_rounds'][$name] = 0;
-                } else {
-                    if($result['real_position'] <= 30) $stats['final_rounds'][$name]++;
                 }
 
                 if( !array_key_exists( $name, $stats['top_three'] ) ) {
                     $stats['top_three'][$name] = 0;
-                } else {
-                    if($result['real_position'] <= 3) $stats['top_three'][$name]++;
-                }                
+                }               
                 
                 if( !array_key_exists( $name, $stats['wins'] ) ) {
                     $stats['wins'][$name] = 0;
-                } else {
-                    if($result['real_position'] == 1) $stats['wins'][$name]++;
                 }      
 
-            }
+                if($result['real_position'] <= 3) $stats['top_three'][$name]++;
+                if($result['real_position'] == 1) $stats['wins'][$name]++;
+                if($result['real_position'] <= 30) $stats['final_rounds'][$name]++;
+
+            }   
 
         }
 
         array_multisort($stats['final_rounds'], SORT_DESC);
         array_multisort($stats['top_three'], SORT_DESC);
         array_multisort($stats['wins'], SORT_DESC);        
+
+        //dd($stats);
 
         return $stats;
 

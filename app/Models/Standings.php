@@ -28,7 +28,7 @@ class Standings {
 
 
         //WARNING: this can be potentially significant performance bottleneck
-        $data['tournament']['stats'] = Tournament::getStats($id_tournament);
+        $data['tournament']['stats'] = Tournament::getStats($id_tournament, $id_competition);
 
         return $data;
 
