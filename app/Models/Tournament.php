@@ -81,7 +81,7 @@ class Tournament {
      * @param $results - parse and return Stat results
      * @param $header -- parse and return Stat header (meta info: Competition name, country, hill size)
      **/
-    public static function loadTournamentCompetitions(int $id_tournament, bool $results = false, bool $header = true) : array {
+    public static function loadTournamentCompetitions($id_tournament, bool $results = false, bool $header = true) : array {
 
         $path = DsjData::$dir_tournaments.'/'.$id_tournament.'/competitions';
 

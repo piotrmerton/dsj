@@ -18,6 +18,7 @@ class JumperController extends Controller
 
         $data = array(
         	'name' => $jumper->name,
+            'country' => $jumper->country,
         	'stats' => $jumper->stats,
         );
 
