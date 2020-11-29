@@ -1,3 +1,4 @@
+import { standings } from './ui/standings';
 import { tabs } from './ui/tabs';
 
 export let UI = {
@@ -19,5 +20,7 @@ export let UI = {
 
     },
     
+    standings,
     tabs,
+
 }

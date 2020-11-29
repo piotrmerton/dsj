@@ -24,6 +24,7 @@ class Standings {
         $data = array(
         	'tournament' => $tournament_meta,
         	'standings' => $standings,
+            'latest_competition_id' => $id_competition,
         );
 
 

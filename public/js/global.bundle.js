@@ -104,6 +104,7 @@ __webpack_require__.r(__webpack_exports__);
 document.addEventListener("DOMContentLoaded", function () {
   _ui__WEBPACK_IMPORTED_MODULE_1__["UI"].init();
   _ui__WEBPACK_IMPORTED_MODULE_1__["UI"].tabs.bind();
+  _ui__WEBPACK_IMPORTED_MODULE_1__["UI"].standings.bind();
 });
 window.addEventListener('resize', function () {
   _ui__WEBPACK_IMPORTED_MODULE_1__["UI"].init();
@@ -121,7 +122,9 @@ window.addEventListener('resize', function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UI", function() { return UI; });
-/* harmony import */ var _ui_tabs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ui/tabs */ "./js/ui/tabs.js");
+/* harmony import */ var _ui_standings__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ui/standings */ "./js/ui/standings.js");
+/* harmony import */ var _ui_tabs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ui/tabs */ "./js/ui/tabs.js");
+
 
 var UI = {
   mobile: /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent),
@@ -135,7 +138,38 @@ var UI = {
     this.windowHeight = window.innerHeight;
     if (this.debug) console.log('Window width: ' + this.windowWidth + ', Window height: ' + this.windowHeight);
   },
-  tabs: _ui_tabs__WEBPACK_IMPORTED_MODULE_0__["tabs"]
+  standings: _ui_standings__WEBPACK_IMPORTED_MODULE_0__["standings"],
+  tabs: _ui_tabs__WEBPACK_IMPORTED_MODULE_1__["tabs"]
+};
+
+/***/ }),
+
+/***/ "./js/ui/standings.js":
+/*!****************************!*\
+  !*** ./js/ui/standings.js ***!
+  \****************************/
+/*! exports provided: standings */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "standings", function() { return standings; });
+var standings = {
+  selector: '.do-toggle-standings',
+  bind: function bind() {
+    console.log('binding standings ui..');
+    this.toggleStandings();
+  },
+  toggleStandings: function toggleStandings() {
+    var selector = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.selector;
+    if (document.querySelector(selector) === null) return;
+    var ui = document.querySelector(selector);
+    ui.addEventListener('change', function (event) {
+      //event.target.value
+      var url = ui.options[ui.selectedIndex].dataset.url;
+      window.location.href = url;
+    });
+  }
 };
 
 /***/ }),

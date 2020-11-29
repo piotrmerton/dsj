@@ -6,9 +6,17 @@
 		font-size: 1.375em;
 	}
 
+	.standings__ui {		
+		margin: 1rem 0;
+		select {
+
+			margin: 0 auto;
+			font-size: .875em;
+		}
+	}
 	.standings__table {
 
-		//min-width: 60rem;
+		min-width: 40rem;
 		margin-left: auto;
 		margin-right: auto;
 

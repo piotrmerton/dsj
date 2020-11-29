@@ -6,6 +6,9 @@ import { UI } from './ui';
 document.addEventListener("DOMContentLoaded", () => { 
     UI.init();
     UI.tabs.bind();
+
+    UI.standings.bind();
+    
 } );
 
 window.addEventListener('resize', () => { UI.init() } );

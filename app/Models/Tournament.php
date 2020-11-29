@@ -213,6 +213,7 @@ class Tournament {
         $stats['final_round'] = array();
         $stats['top_three'] = array();
         $stats['wins'] = array();
+        $stats['number_of_competitions'] = count($competitions);
 
         //dd($competitions);
 

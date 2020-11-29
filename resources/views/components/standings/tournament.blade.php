@@ -9,6 +9,17 @@
 		]) !!}
 	</h2>
 
+	<div class="standings__ui">
+		<select class="ui-standings do-toggle-standings">
+			<option value="0">{{ __('Archiwum wyników') }}</option>
+			@for ($i = 1; $i <= $data['tournament']['stats']['number_of_competitions']; $i++)
+				<option value="{{ $i }}" data-url="{{ route('standings', array( $data['tournament']['id'], $i)) }}">
+					{{ __('Klasyfikacja po :i konkursie', ['i' => $i]) }}
+				</option>
+			@endfor
+		</select>
+	</div>
+
 	<table class="standings__table table--tournament">
 		<thead>
 			<tr>
