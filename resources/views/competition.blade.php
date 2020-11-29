@@ -4,10 +4,14 @@
 
 @section('content')
 
-	@include('components.breadcrumbs')
 
 	<div class="content__main content--competition">
+
+		@include('components.banner.competition')
+
 		<div class="viewport">
+
+			@include('components.breadcrumbs')
 
 			<h1>{{ __('Wyniki konkursu') }} {{ $competition['name'] }}</h1>
 

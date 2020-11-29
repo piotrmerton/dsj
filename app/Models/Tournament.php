@@ -92,8 +92,6 @@ class Tournament {
                     $competition_data = DsjData::parseDsjStatHeader($file);
                     $competition_data['id'] = str_replace('.txt', '', $item);
 
-                    $competition_data['country'] = Hill::getCountry( $competition_data['venue']['city'] );
-
                     if( $results ) {
                     	$competition_data['results'] = DsjData::parseDsjStatResults($file, $competition_data['type']);
                     }

@@ -12,7 +12,7 @@
     <body>
 
         @section('header')
-            @include('layout.header')
+            {{-- @include('layout.header') --}}
         @show
 
         @section('content')

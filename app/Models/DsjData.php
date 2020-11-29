@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Models\Hill;
+
 define('PATH', base_path() ); //TO DO: https://stackoverflow.com/questions/42155536/what-is-the-best-practice-for-adding-constants-in-laravel-long-list
 
 
@@ -39,6 +41,7 @@ class DsjData {
         for($i = 0; $i < $hs_position; $i++ ) {
             $hillname .= $hill[$i].' ';
         }
+        $hillname = trim($hillname);
 
         // "Wyniki konkursu" or "Wyniki kwalifikacji"
         switch ( $hill[$hs_position + 2] ) {
@@ -51,11 +54,12 @@ class DsjData {
         }
 
         $header = array(
-            'name' => trim($hillname) . ' ' . $hill[$hs_position],
+            'name' => $hillname . ' ' . $hill[$hs_position],
             'venue' => array(
-                'city' => trim($hillname),
+                'city' => $hillname,
                 'hs' => $hill[$hs_position]
             ),
+            'country' => Hill::getCountry($hillname),
             'type' => $type,
             'date' => strtotime($date[2]),
 

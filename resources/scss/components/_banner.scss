@@ -1,0 +1,46 @@
+.banner-component {
+
+	display: grid;
+	align-items: center;
+
+	min-height: 20rem;
+	background: #213681;
+
+	margin-bottom: 1rem;
+
+	color: #fff;
+
+	h1 {
+		font-size: 4em;
+	}
+
+	a {
+		color: #fff;
+		text-decoration: underline;
+	}
+
+}
+
+.banner__meta {
+	display: flex;
+	justify-content: center;
+
+	li {
+		margin: 0 .5rem;
+	}
+}
+
+.banner--competition {
+	h1 {
+		display: flex;
+		align-items: center;	
+		justify-content: center;
+		margin-bottom: .5rem;
+
+		.ui-ico {
+			width: 3rem;
+			height: 2rem;
+			margin-left: 1rem;
+		}
+	}
+}
