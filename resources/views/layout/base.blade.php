@@ -19,11 +19,14 @@
             <p>DSJ API content placeholder</p>
         @show
 
-
         @section('footer')
             @include('layout.footer')
         @show
        
+
+        @section('scripts')
+            <script src="{{ asset('js/global.bundle.js') }}"></script>
+        @show   
 
     </body>
 </html>

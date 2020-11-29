@@ -1,0 +1,27 @@
+.tabs__nav {
+    .item--tab {
+        &.tab--open {
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    @media all and (max-width: $breakpoint_mobile) {
+        display: none;
+    }
+}
+
+.tab__title {
+    display: none;
+}
+
+.tabs__contents {
+    .item--tab {
+        &:not(.tab--open) {
+            .tab__content {
+                display: none;
+            }
+        }
+    }
+}
