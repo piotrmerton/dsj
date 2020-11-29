@@ -12,11 +12,11 @@
 	<table class="standings__table table--tournament">
 		<thead>
 			<tr>
-				<td>{{ __('Pozycja') }}</td>
-				<td>{{ __('Zawodnik') }}</td>
+				<td class="position">{{ __('Pozycja') }}</td>
+				<td class="name">{{ __('Zawodnik') }}</td>
 				<td>{{ __('Kraj') }}</td>
-				<td>{{ __('Punkty') }}</td>
-				<td>{{ __('Strata') }}</td>
+				<td class="result">{{ __('Punkty') }}</td>
+				<td class="result">{{ __('Strata') }}</td>
 			</tr>
 		</thead>
 		<tbody>
@@ -26,10 +26,10 @@
 						<span class="position__value">{{ $row['real_position'] }}.</span>
 						<span class="position__trend trend--{{ $row['trend'] }}"></span>
 					</td>
-					<td><a href="{{ url('/jumper/'.$row['name'].'/'.$data['tournament']['id']) }}">{{ $row['name'] }}</a></td>
+					<td class="name"><a href="{{ url('/jumper/'.$row['name'].'/'.$data['tournament']['id']) }}">{{ $row['name'] }}</a></td>
 					<td><img src="{{ asset('img/flags/'.$row['country'].'.svg') }}" alt="{{ $row['country'] }}"/></td>
-					<td>{{ $row['points'] }}</td>
-					<td>{{ $row['difference'] }}</td>
+					<td class="result">{{ $row['points'] }}</td>
+					<td class="result">{{ $row['difference'] }}</td>
 				</tr>
 			@endforeach
 		</tbody>

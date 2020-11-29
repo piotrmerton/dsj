@@ -4,8 +4,11 @@
 
 @import 'base/viewport';
 @import 'base/generic';
+@import 'base/typography';
 
 @import 'components/breadcrumbs';
 @import 'components/standings';
 @import 'components/tabs';
+
+@import 'pages/competition';
 

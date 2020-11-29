@@ -9,9 +9,7 @@
 	<div class="content__main content--competition">
 		<div class="viewport">
 
-			<h1>Competition view {{ $competition['name'] }}</h1>
-			<small>resources/views/competition</small>
-
+			<h1>{{ __('Wyniki konkursu') }} {{ $competition['name'] }}</h1>
 
 			<div class="ui-tabs tabs--competition">
 				<nav class="tabs__nav">
