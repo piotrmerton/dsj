@@ -18,6 +18,7 @@ class Competition {
 
         $competition = self::loadCompetition($id_tournament, $id_competition);
 
+        //TO DO: iterate through keys and assign programatically
         $this->id($competition['id']);
         $this->name($competition['name']);
         $this->results($competition['results']);
