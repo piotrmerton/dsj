@@ -7,12 +7,20 @@ use App\Models\Tournament;
 
 class Competition {
 
+    public $id;
+    public $name;
 	public $date;
 	public $city;
 	public $hs;
 	public $results;
 
 	public function __construct($id_tournament, $id_competition) {
+
+        $competition = self::loadCompetition($id_tournament, $id_competition);
+
+        $this->id($competition['id']);
+        $this->name($competition['name']);
+        $this->results($competition['results']);
 
 	}
 
