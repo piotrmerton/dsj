@@ -43,15 +43,7 @@
 						<li class="list__item item--tab" data-tab-name="rankings">
 							<a class="tab__title do-toggle-tab">{{ __('Klasyfikacje')}}</a>
 							<div class="tab__content">
-								
-								<ul class="tournament__rankings">
-									@foreach( $tournament['rankings'] as $ranking )
-										<li class="list__item item--ranking">
-											<a href="{{ route('ranking', array($tournament['id'], $ranking['id'])) }}">{{ $ranking['name'] }}</a>
-										</li>
-									@endforeach
-								</ul>
-
+								@include('components.rankings')
 							</div>
 						</li>
 

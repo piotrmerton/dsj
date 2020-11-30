@@ -16,12 +16,9 @@ class TournamentController extends Controller
         
         $tournament = Tournament::loadTournament($id_tournament);
 
+        $breadcrumbs = new Breadcrumbs($tournament['name'], false);
 
-        $breadcrumbs = new Breadcrumbs($tournament['name'], route('tournament', $tournament['id']));
-
-        $latest_competition = end($tournament['calendar']);
-
-        $standings = Standings::loadSingleStandings($id_tournament, $latest_competition['id']);
+        $standings = Standings::loadSingleStandings($id_tournament, $tournament['latest_competition_id']);
 
         //dd($standings);
 

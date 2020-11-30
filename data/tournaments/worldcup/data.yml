@@ -6,6 +6,7 @@ rankings:
     id: 'four-hills'
     name: "Turniej Czterech Skoczni"
     points: jump
+    highlight: true,
     competitions: 
       - 9
       - 10

@@ -7,9 +7,24 @@
 	.calendar__table {
 		margin-left: auto;
 		margin-right: auto;
+
+		a {
+			display: block;
+		}
+
+		tr {
+			&.competition--highlight {
+				background: #e5ebff;
+			}
+		}
 	}
 
 	.ui-ico {
 		margin-right: .25rem;
+	}
+
+	.competition__ranking {
+		display: block;
+		font-size: .75em;
 	}
 }

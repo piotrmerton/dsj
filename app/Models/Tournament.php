@@ -53,10 +53,11 @@ class Tournament {
 	}
 
 
-    public static function loadTournament($id_tournament, $results = false) : array {
+    public static function loadTournament($id_tournament) : array {
 
         $tournament_data = self::loadTournamentMeta($id_tournament);
-        $tournament_data['calendar'] = self::loadTournamentCompetitions($id_tournament, $results);
+        $tournament_data['calendar'] = self::getCalendar($tournament_data);
+        $tournament_data['latest_competition_id'] = end($tournament_data['calendar'])['id'];
 
         return $tournament_data;
 
@@ -72,6 +73,32 @@ class Tournament {
         $tournament_meta['url'] = route('tournament', array( 'id_tournament' => $id_tournament));
 
         return $tournament_meta;
+
+    }
+
+    private static function getCalendar($tournament) : array {
+
+        $competitions = self::loadTournamentCompetitions($tournament['id'], false);
+
+        foreach($competitions as $key => $competition) {
+
+            
+            foreach($tournament['rankings'] as $ranking) {
+
+                if(in_array($competition['id'], $ranking['competitions'])) {
+                   
+                    $competitions[$key]['ranking'] = $ranking['name'];
+
+                    if(isset($ranking['highlight'])) $competitions[$key]['highlight'] = true;
+                    
+                    break;
+                }
+
+            }
+
+        }
+
+        return $competitions;
 
     }
 

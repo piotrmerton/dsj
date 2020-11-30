@@ -20,7 +20,10 @@ class RankingController extends Controller
             $ranking = Ranking::loadRanking($id_tournament, $id_ranking);
         }
         
-        $breadcrumbs = new Breadcrumbs();
+        $tournament = Tournament::loadTournamentMeta($id_tournament);
+
+        $breadcrumbs = new Breadcrumbs( $tournament['name'], route('tournament', array($id_tournament)) );
+        $breadcrumbs->add( $ranking['name'], route('ranking', array($id_tournament, $id_ranking)) );
 
         //dd($ranking);
 
@@ -28,7 +31,7 @@ class RankingController extends Controller
             [
                 'breadcrumbs' => $breadcrumbs->get(),
                 'ranking' => $ranking,
-                'tournament' => Tournament::loadTournamentMeta($id_tournament),
+                'tournament' => $tournament,
             ]
         );
     }
