@@ -8,6 +8,11 @@ Interface based on Laravel framework to browse flat stats files (Tournament and 
 
 ## TO DO
 - error handling when file doesn’t exist
-- add qualifications standings
+- tournaments stats to view
+- qualifications standings to jumper stats
 - standings bug: 31 position parsing when 31 jumpers qualified to final round
-- add charts.js for stats in Jumper view
+- API routes
+
+##DONE
+- qualifications standings in competition view
+- charts.js for stats in Jumper view
