@@ -31,9 +31,12 @@ class Competition {
     public static function loadCompetition($id_tournament, $id_competition, $header = true, $load_tournament_meta = true, $load_qualifications = true) : array {
 
         $path = DsjData::$dir_tournaments.'/'.$id_tournament;
+        $file_path = $path.'/competitions/'.$id_competition.'.txt';
+        
+        if(!file_exists($file_path)) die( 'Error: competition stats does not exist' );
 
         // load DSJ4 stats file 
-        $file = file($path.'/competitions/'.$id_competition.'.txt');
+        $file = file($file_path);
 
         if($header) {
             $header = DsjData::parseDsjStatHeader($file);
