@@ -13,6 +13,6 @@ Interface based on Laravel framework to browse flat stats files (Tournament and 
 - standings bug: 31 position parsing when 31 jumpers qualified to final round
 - API routes
 
-##DONE
+## DONE
 - qualifications standings in competition view
 - charts.js for stats in Jumper view
