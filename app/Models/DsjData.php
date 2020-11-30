@@ -195,7 +195,7 @@ class DsjData {
 
             if($iteration == 1) $top_score = $points;
 
-            $standings[] = array(
+            $jumper_data = array(
                 'name' => $name,
                 'country' => $country,                
                 'real_position' => $real_position,
@@ -205,6 +205,8 @@ class DsjData {
                 'previous_position' => null,
                 'trend' => null,
             );
+
+            
 
             $iteration++;
             $real_position = $iteration;
@@ -217,42 +219,13 @@ class DsjData {
 
                 $previous_standings = Standings::loadSingleStandings($id_tournament, (int)$id_competition - 1, false);
 
-                foreach($standings as $key => $current_results) {
+                $jumper_data = Standings::addTrend($jumper_data, $previous_standings['standings']['results']);
 
-                    foreach($previous_standings['standings']['results'] as $previous_results) {
-
-                        if( $current_results['name'] === $previous_results['name']) {
-                            
-
-                            //tournament position change
-                            $previous_position = (int)$previous_results['real_position'];
-                            $current_position = (int)$current_results['real_position'];
-                            $change = $previous_position - $current_position;
-
-                            if($previous_position > $current_position) {
-                                //previosly jumper had worse position
-                                $trend = 'positive';
-                            } elseif ($previous_position < $current_position) {
-                                //previosly jumper had better position
-                                $trend = "negative";
-                            } elseif ($previous_position == $current_position) {
-                                $trend = "neutral";
-                            }
-
-                            $standings[$key]['previous_position'] = $previous_position;
-                            $standings[$key]['change'] = abs($change);
-                            $standings[$key]['trend'] = $trend;
-
-                            break;
-                        }
-
-                    }
-
-                }
             }
 
-        }
+            $standings[] = $jumper_data;
 
+        }        
         return $standings;
 
     }

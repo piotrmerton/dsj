@@ -27,6 +27,7 @@
 				<td class="name">{{ __('Zawodnik') }}</td>
 				<td>{{ __('Kraj') }}</td>
 				<td class="result">{{ __('Punkty') }}</td>
+				<td class="result">{{ __('Strata') }}</td>
 				<td class="result">{{ __('Występów') }}</td>
 			</tr>
 		</thead>
@@ -34,7 +35,8 @@
 			@foreach ($ranking['standings'] as $row)
 				<tr>
 					<td class="position">
-						<span class="position__value">{{ $loop->iteration }}.</span>
+						<span class="position__value">{{ $row['real_position'] }}.</span>
+						<span class="position__trend trend--{{ $row['trend'] }}"></span>
 					</td>
 					<td class="name">
 						<a href="{{ url('/jumper/'.$row['name'].'/'.$tournament['id']) }}">{{ $row['name'] }}</a>
@@ -42,7 +44,8 @@
 					<td>
 						<img class="ui-ico ico--flag" src="{{ asset('img/flags/'.$row['country'].'.svg') }}" alt="{{ $row['country'] }}"/>
 					</td>
-					<td class="result">{{ $row['jump_points'] }}</td>
+					<td class="result">{{ $row['result'] }}</td>
+					<td class="result">{{ $row['difference'] }}</td>
 					<td class="result">{{ $row['final_round'] }}</td>
 				</tr>
 			@endforeach

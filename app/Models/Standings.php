@@ -35,6 +35,52 @@ class Standings {
 
     }
 
+    /**
+     * use in Tournament or Ranking standings loop only
+     * @param $row - row of standings data
+     */
+    public static function addTrend($row, $previousStanding) : array {
+
+            foreach($previousStanding as $previous_results) {
+
+                $found_in_previous_standings = false;
+
+                if( $row['name'] === $previous_results['name']) {
+                    
+                    //tournament position change
+                    $previous_position = (int)$previous_results['real_position'];
+                    $current_position = (int)$row['real_position'];
+                    $change = $previous_position - $current_position;
+
+                    if($previous_position > $current_position) {
+                        //previosly jumper had worse position
+                        $trend = 'positive';
+                    } elseif ($previous_position < $current_position) {
+                        //previosly jumper had better position
+                        $trend = "negative";
+                    } elseif ($previous_position == $current_position) {
+                        $trend = "neutral";
+                    }
+
+                    $row['previous_position'] = $previous_position;
+                    $row['change'] = abs($change);
+                    $row['trend'] = $trend;
+
+                    $found_in_previous_standings = true;
+                    break;
+                }
+
+            }
+
+            //what if jumper wasn't present in previous standings?
+            if(!$found_in_previous_standings) {
+                $row['trend'] = 'positive';
+                //TO DO: what about change?
+            }
+        return $row;
+
+    }
+
 
    
 
