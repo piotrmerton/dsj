@@ -1,2 +1,14 @@
 name: Puchar Świata 2020
 date_start: 1606420800
+date_end: null
+rankings:
+  - four-hills:
+      id: 'four-hills'
+      name: "Turniej Czterech Skoczni"
+      points: jump #jump or cup
+      competitions: 
+        - 9
+        - 10
+        - 11
+        - 12
+      
