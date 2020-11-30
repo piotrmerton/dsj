@@ -50,7 +50,6 @@ class Ranking {
 
     public static function loadRanking($id_tournament, $id_ranking, $stage = false) : array {
 
-    
         $ranking_meta = self::getRankingMeta($id_tournament, $id_ranking); 
 
         $competitions_count = count($ranking_meta['competitions']);
@@ -75,8 +74,7 @@ class Ranking {
 
 
     }
-
-
+    
     private static function getStandings($ranking_meta, $stage = false, $trend = true) : array {
 
         $standings = array();
@@ -103,8 +101,6 @@ class Ranking {
                     $standings[$name] = array(
                         'name' => $results['name'],
                         'country' => $results['country'],
-                        //'jump_points' => (float) $results['result'],
-                        //'cup_points' => $real_position <= 30 ? self::CUP_POINTS[$real_position] : 0,
                         'result' => self::calcResult($points_rules, $results, 0),
                         'final_round' => $real_position <= 30 ? 1 : 0,
                         'previous_position' => 0,
@@ -112,12 +108,8 @@ class Ranking {
                     );
 
                 } else {
-                    
-                    //$standings[$name]['jump_points'] += (float) $results['result'];
-                    //$standings[$name]['cup_points'] += $real_position <= 30 ? (int)self::CUP_POINTS[$real_position] : 0;
                     $standings[$name]['result'] = self::calcResult($points_rules, $results, $standings[$name]['result']);
                     if( $results['real_position'] <= 30 ) $standings[$name]['final_round']++;
-
                 }
 
             }
