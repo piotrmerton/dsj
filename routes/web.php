@@ -7,7 +7,7 @@ use App\Http\Controllers\TournamentsController;
 use App\Http\Controllers\CompetitionController;
 use App\Http\Controllers\StandingsController;
 use App\Http\Controllers\JumperController;
-
+use App\Http\Controllers\RankingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,3 +34,6 @@ Route::get('competition/{id_tournament}/{id_competition}', [CompetitionControlle
 Route::get('standings/{id_tournament}/{id_competition}', [StandingsController::class, 'display'])->name('standings');;
 
 Route::get('jumper/{name}/{id_tournament}', [JumperController::class, 'display']);
+
+Route::get('ranking/{id_tournament}/{id_ranking}', [RankingController::class, 'display'])->name('ranking');
+Route::get('ranking/{id_tournament}/{id_ranking}/{stage?}', [RankingController::class, 'display'])->name('ranking');;

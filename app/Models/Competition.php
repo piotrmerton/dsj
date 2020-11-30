@@ -28,27 +28,34 @@ class Competition {
     /**
      * load single competition meta and results
      */
-    public static function loadCompetition($id_tournament, $id_competition) : array {
+    public static function loadCompetition($id_tournament, $id_competition, $header = true, $load_tournament_meta = true, $load_qualifications = true) : array {
 
         $path = DsjData::$dir_tournaments.'/'.$id_tournament;
 
         // load DSJ4 stats file 
         $file = file($path.'/competitions/'.$id_competition.'.txt');
 
-        $header = DsjData::parseDsjStatHeader($file);
+        if($header) {
+            $header = DsjData::parseDsjStatHeader($file);
+            
+            $competition_data = array_merge(
+                $header, 
+                array(
+                    'results' => DsjData::parseDsjStatResults($file, $header['type']),
+                ),
+            );
+        } else {
+            $competition_data = array(
+                'results' => DsjData::parseDsjStatResults($file),
+            );
+        }
 
-        $results = DsjData::parseDsjStatResults($file, $header['type']);
-
-        $tournament_meta = Tournament::loadTournamentMeta($id_tournament);
-
-        $competition_data = array_merge(
-        	$header, 
-        	array(
-        		'tournament' => $tournament_meta,
-        		'results' => $results,
-                'qualifications' => self::loadQualificationsResults($id_tournament, $id_competition),
-        	),
-        );
+        if($load_tournament_meta) {
+            $competition_data['tournament'] = Tournament::loadTournamentMeta($id_tournament);
+        }
+        if($load_qualifications) {
+            $competition_data['qualifications'] = self::loadQualificationsResults($id_tournament, $id_competition);
+        }
 
         return $competition_data;
 
