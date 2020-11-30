@@ -13,7 +13,7 @@ class Breadcrumbs {
             'url' => url('/'),
         );
         $this->breadcrumbs[] = array(
-            'title' => __('Tournaments'),
+            'title' => __('Wszystkie turnieje'),
             'url' => route('tournaments'),
         );        		
 
