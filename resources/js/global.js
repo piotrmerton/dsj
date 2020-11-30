@@ -5,6 +5,9 @@ import { UI } from './ui';
 
 document.addEventListener("DOMContentLoaded", () => { 
     UI.init();
+   
+   	UI.charts.init();
+
     UI.tabs.bind();
 
     UI.standings.bind();

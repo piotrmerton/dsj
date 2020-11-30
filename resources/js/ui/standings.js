@@ -3,11 +3,7 @@ export let standings = {
 	selector : '.do-toggle-standings',
 
 	bind : function() {
-
-		console.log('binding standings ui..');
-
 		this.toggleStandings();
-
 	},
 
 	toggleStandings : function(selector = this.selector) {

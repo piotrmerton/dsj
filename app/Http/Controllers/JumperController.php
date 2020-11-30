@@ -15,8 +15,6 @@ class JumperController extends Controller
     {
 
 
-
-
     	$jumper = new Jumper($name, $id_tournament, true);
 
         $data = array(
@@ -30,10 +28,25 @@ class JumperController extends Controller
 
         //dd($data);
 
+        //prepare datasets for charts.js
+        $datasets = array(
+            'labels' => array(),
+            'competitions' => array(),
+            'standings' => array(),
+        );
+
+
+        foreach($data['stats']['competitions'] as $competition) {
+            $datasets['labels'][] = $competition['id'] . '. ' .$competition['name'];
+            $datasets['competitions'][] = $competition['position'] > 0 ? $competition['position'] : 53;
+            $datasets['standings'][] = $competition['position_tournament'] > 0 ? $competition['position_tournament'] : 53;
+        }
+
         return view('jumper', 
             [
                 'breadcrumbs' => $breadcrumbs->get(),
-                'data' => $data 
+                'data' => $data,
+                'datasets' => $datasets,
             ]
         );
     }

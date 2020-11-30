@@ -12,57 +12,76 @@
 
 			@include('components.breadcrumbs')
 
-			<h2>
-				{{ __('Statystyki występów w') }} <a href="{{ $data['stats']['tournament']['url'] }}">{{ $data['stats']['tournament']['name'] }}</a>
-			</h2>
+			<section class="stats-component stats--jumper">
 
-			<dl class="stats-component stats--jumper">
+				<h2 class="stats__title text--center">
+					{{ __('Statystyki występów w') }} <a href="{{ $data['stats']['tournament']['url'] }}">{{ $data['stats']['tournament']['name'] }}</a>
+				</h2>
 
-				<dt>{{ __('Aktualne miejsce w klasyfikacji') }}:</dt>
-				<dd>{{ $data['stats']['current_position'] }}</dd>
+				<dl>
+					<dt>{{ __('Aktualne miejsce w klasyfikacji') }}:</dt>
+					<dd>{{ $data['stats']['current_position'] }}</dd>
 
-				<dt>{{ __('Liczba punktów') }}:</dt>
-				<dd>{{ $data['stats']['points'] }}</dd>
+					<dt>{{ __('Liczba punktów') }}:</dt>
+					<dd>{{ $data['stats']['points'] }}</dd>
 
-				<dt>{{ __('Pozycje w poszczególnych konkursach') }}:</dt>
-				<dd>
-					@foreach( $data['stats']['competitions'] as $competition)
-						<a href="{{ $competition['url'] }}" title="{{ $competition['name'] }}">{{ $competition['position'] }}</a>@if (!$loop->last), @endif
-					@endforeach
-				</dd>
+					<dt>{{ __('Pozycje w poszczególnych konkursach') }}:</dt>
+					<dd>
+						@foreach( $data['stats']['competitions'] as $competition)
+							<a href="{{ $competition['url'] }}" title="{{ $competition['name'] }}">{{ $competition['position'] }}</a>@if (!$loop->last), @endif
+						@endforeach
+					</dd>
 
-				<dt>{{ __('Pozycje w klasyfikacji generalnej') }}:</dt>
-				<dd>
-					@foreach( $data['stats']['competitions'] as $competition)
-						<a href="{{ route('standings', array( $data['stats']['tournament']['id'], $competition['id'])) }}">{{ $competition['position_tournament'] }}</a>@if (!$loop->last), @endif
-					@endforeach
-				</dd>	
+					<dt>{{ __('Pozycje w klasyfikacji generalnej') }}:</dt>
+					<dd>
+						@foreach( $data['stats']['competitions'] as $competition)
+							<a href="{{ route('standings', array( $data['stats']['tournament']['id'], $competition['id'])) }}">{{ $competition['position_tournament'] }}</a>@if (!$loop->last), @endif
+						@endforeach
+					</dd>	
 
-				<dt>{{ __('Ile razy na podium') }}:</dt>
-				<dd>{{ $data['stats']['top_three'] }}</dd>
+					<dt>{{ __('Ile razy na podium') }}:</dt>
+					<dd>{{ $data['stats']['top_three'] }}</dd>
 
-				<dt>{{ __('Ilość zwycięstw') }}:</dt>
-				<dd>{{ $data['stats']['wins'] }}</dd>	
+					<dt>{{ __('Ilość zwycięstw') }}:</dt>
+					<dd>{{ $data['stats']['wins'] }}</dd>	
 
-				<dt>{{ __('Ile razy na drugim miejscu') }}:</dt>
-				<dd>{{ $data['stats']['second'] }}</dd>	
+					<dt>{{ __('Ile razy na drugim miejscu') }}:</dt>
+					<dd>{{ $data['stats']['second'] }}</dd>	
 
-				<dt>{{ __('Ile razy na trzecim miejscu') }}:</dt>
-				<dd>{{ $data['stats']['third'] }}</dd>	
+					<dt>{{ __('Ile razy na trzecim miejscu') }}:</dt>
+					<dd>{{ $data['stats']['third'] }}</dd>	
 
-				<dt>{{ __('Ile razy w pierwszej szóstce') }}:</dt>
-				<dd>{{ $data['stats']['top_six'] }}</dd>
+					<dt>{{ __('Ile razy w pierwszej szóstce') }}:</dt>
+					<dd>{{ $data['stats']['top_six'] }}</dd>
 
-				<dt>{{ __('Ile razy w pierwszej dziesiątce') }}:</dt>
-				<dd>{{ $data['stats']['top_ten'] }}</dd>											
+					<dt>{{ __('Ile razy w pierwszej dziesiątce') }}:</dt>
+					<dd>{{ $data['stats']['top_ten'] }}</dd>											
 
-				<dt>{{ __('Ilość razy w finałowej rundzie') }}:</dt>
-				<dd>{{ $data['stats']['final_round'] }}</dd>	
+					<dt>{{ __('Ilość razy w finałowej rundzie') }}:</dt>
+					<dd>{{ $data['stats']['final_round'] }}</dd>	
 
-			</dl>
+				</dl>
+			</section>
+
+			<div class="jumper__chart">
+				<canvas id="competitionsChart" width="75" height="33"></canvas>
+			</div>
+
 
 		</div>
 
 	</div>
+
+
+@endsection
+
+
+@section ('scripts')
+
+	<script>
+		var jumperDatasets = {!! json_encode($datasets) !!}
+	</script>
+
+	@parent
 
 @endsection
