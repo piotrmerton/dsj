@@ -120,41 +120,13 @@ class Tournament {
 
     /**
      * Load all Tournament competitions files to and parse results
-     * This is similar to Tournament::loadTournamentCompetitions but more lightweight, since we don't parse Stats headers. Probably both methods should be merged and use arguments as settings 
+     * This is similar wrapper of Tournament::loadTournamentCompetitions but more lightweight, since we don't parse Stats headers. Probably both methods should be merged and use arguments as settings 
      * @param $id_tournament
      **/    
     public static function loadTournamentCompetitionsResults($id_tournament) : array {
+
+        return self::loadTournamentCompetitions($id_tournament, true, false);
         
-        $path = DsjData::$dir_tournaments.'/'.$id_tournament.'/competitions';
-
-        if ($handle = opendir($path)) {
-
-            /* loop over the directory. */
-            while (false !== ($item = readdir($handle))) {
-                if ($item != "." && $item != ".." && $item != "index.php") {
-                    
-                    // load DSJ4 stats file 
-                    $file = file($path .'/'. $item);
-
-                    $competition_data['id'] = str_replace('.txt', '', $item);
-                    $competition_data['results'] = DsjData::parseDsjStatResults($file);
-                    
-                    $tournament_comps[$competition_data['id']] = $competition_data;
-
-                }
-
-            }
-
-            closedir($handle);
-
-        }
-
-        usort($tournament_comps, function($a, $b) {
-            return $a['id'] <=> $b['id'];
-        });
-
-        return $tournament_comps;
-
     }
 
     /**
