@@ -3,7 +3,9 @@
 
         <div class="banner__content text--center">
             @section('banner_content')
-                <h1>{{ __('Banner title') }}</h1>  
+
+                <h1>@yield('banner_title')</h1>  
+                
             @show
         </div>
 
