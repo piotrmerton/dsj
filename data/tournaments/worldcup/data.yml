@@ -12,11 +12,10 @@ rankings:
       - 10
       - 11
       - 12
-  raw-air:
+  flying-world-cup:
     id: 'flying-world-cup'
     name: "Puchar Świata w Lotach"
     points: cup
     competitions: 
       - 13
-      - 14
       

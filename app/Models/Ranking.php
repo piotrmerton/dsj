@@ -65,6 +65,7 @@ class Ranking {
             'name' => $ranking_meta['name'],
             'stage' => $progress,
             'number_of_competitions' => $competitions_count,
+            'latest_competition_id' => end($ranking_meta['competitions']),
             'url' => route('ranking', array($id_tournament, $id_ranking) ),
             'standings' => self::getStandings($ranking_meta, $stage),
 
