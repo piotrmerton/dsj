@@ -9,7 +9,7 @@
 				<td>
 					<a href="{{ url('/competition/'.$tournament['id'].'/'.$competition['id']) }}">{{ $competition['name'] }}</a>
 					@if (isset($competition['ranking']) )
-						<span class="competition__ranking">{{ $competition['ranking'] }}</span>
+						<a class="competition__ranking" href="{{ $competition['ranking']['url'] }}">{{ $competition['ranking']['name'] }}</a>
 					@endif
 				</td>
 				<td>{{ date('j.n.Y', $competition['date']) }}</td>

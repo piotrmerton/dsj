@@ -87,7 +87,12 @@ class Tournament {
 
                 if(in_array($competition['id'], $ranking['competitions'])) {
                    
-                    $competitions[$key]['ranking'] = $ranking['name'];
+                    $stage = array_search($competition['id'], $ranking['competitions']);
+
+                    $competitions[$key]['ranking'] = array(
+                        'name' => $ranking['name'],
+                        'url' => route('ranking', array($tournament['id'], $ranking['id'], $stage+1)),
+                    );
 
                     if(isset($ranking['highlight'])) $competitions[$key]['highlight'] = true;
                     
