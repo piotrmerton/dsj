@@ -6,6 +6,9 @@
 	
 
 	dl {
+		display: flex;
+		flex-wrap: wrap;
+		flex-flow: row wrap;
 		border-top: 1px solid silver;
 	}
 
@@ -14,15 +17,12 @@
 		padding: .5rem;
 		border-left: 1px solid silver;
 		border-bottom: 1px solid silver;
+		flex-basis: 50%;
+		flex-grow: 0;		
 	}
-
-	dt {
-		width: 50%;
-	}
-
-	dt,
+	
 	dd {
 		border-right: 1px solid silver;
-	}
+	}	
 
 }
