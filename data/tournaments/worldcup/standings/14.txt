@@ -1,0 +1,57 @@
+﻿Puchar Świata 2020-12-01
+Klasyfikacja po 14/33 konkursie
+
+Poz.  Zawodnik                 Kraj         I    II   III     Punkty
+1.    Jakub Janda              CZE          1     1     1        389
+2.    Robert Kranjec           SLO          -     1     -        373
+3.    Andreas Widhoelzl        AUT          1     -     -        367
+4.    Gregor Schlierenzauer    AUT          1     1     -        347
+5.    Kazuyoshi Funaki         JPN          -     1     -        339
+6.    Thomas Morgenstern       AUT          1     -     1        329
+7.    Jani Soininen            FIN          1     -     2        323
+8.    Stefan Horngacher        AUT          1     -     2        310
+9.    Matti Hautamaeki         FIN          1     -     1        304
+10.   Martin Schmitt           GER          1     -     1        298
+11.   Sven Hannawald           GER          -     3     -        282
+12.   Wolfgang Loitzl          AUT          1     -     -        267
+13.   Janne Ahonen             FIN          -     1     -        264
+      Simon Ammann             SUI          1     1     1        264
+15.   Peter Zonta              SLO          -     -     2        257
+16.   Daniel-Andre Tande       NOR          1     -     -        216
+17.   Veli-Matti Lindstroem    FIN          1     -     -        215
+18.   Masahiko Harada          JPN          1     -     -        213
+19.   Adam Małysz              POL          -     -     -        212
+20.   Anders Jacobsen          NOR          -     1     -        204
+      Jan Matura               CZE          -     -     -        204
+22.   Tom Hilde                NOR          -     -     -        201
+23.   Emmanuel Chedal          FRA          1     -     -        189
+24.   Takanobu Okabe           JPN          -     -     -        183
+25.   Kamil Stoch              POL          -     -     1        181
+26.   Roberto Cecon            ITA          -     2     -        176
+27.   Dmitri Vassiliev         RUS          -     -     -        175
+      Lasse Ottesen            NOR          -     -     -        175
+29.   Primoż Peterka           SLO          -     -     1        173
+30.   Andreas Goldberger       AUT          -     -     -        172
+31.   Daiki Ito                JPN          -     -     -        168
+32.   Risto Jussilainen        FIN          -     1     -        167
+33.   Martin Hoellwarth        AUT          -     -     -        164
+34.   Toni Nieminen            FIN          -     1     -        161
+35.   Hideharu Miyahira        JPN          -     -     -        157
+36.   Michael Uhrmann          GER          -     -     1        155
+37.   Peter Prevc              SLO          -     -     -        152
+38.   Tommy Ingebrigtsen       NOR          -     -     -        151
+39.   Ville Kantee             FIN          -     1     -        150
+40.   Ari-Pekka Nikkola        FIN          -     -     -        144
+41.   Jernej Damjan            SLO          -     -     -        135
+42.   Noriaki Kasai            JPN          -     -     -        134
+43.   Andreas Kofler           AUT          -     -     -        118
+44.   Martin Koch              AUT          -     -     -        115
+45.   Tami Kiuru               FIN          -     -     -         97
+46.   Severin Freund           GER          -     -     -         88
+47.   Anders Bardal            NOR          -     -     -         73
+48.   Nicolas Dessum           FRA          -     -     -         67
+49.   Roar Ljoekelsoey         NOR          -     -     -         60
+50.   Dieter Thoma             GER          -     -     -         23
+51.   Domen Prevc              SLO          -     -     -         18
+52.   Michael Neumayer         GER          -     -     -         11
+53.   Johan Remen Evensen      NOR          -     -     -          0
