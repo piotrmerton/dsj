@@ -291,7 +291,6 @@ var tabs = {
     var tabContainer = document.querySelector(selector); //multiple containers: bind all buttons in document instead of one container only
 
     var buttons = document.querySelectorAll(this.buttonSelector);
-    console.log(buttons);
     buttons.forEach(function (button) {
       button.addEventListener('click', function (event) {
         var target = event.target;
@@ -314,16 +313,10 @@ var tabs = {
     var tabs = tabsContainer.querySelectorAll('[data-tab-name="' + tabName + '"]'); //we don't want to allow multiple tabs to be opened at once
     //keep in mind this will prevent also from closing current tab - should you need to have all tabs collapsed, introduce "closeSiblings" method with current tab name param
 
-    if (_ui__WEBPACK_IMPORTED_MODULE_0__["UI"].windowWidth < 960) {
-      this.closeAllTabs(tabsContainer, tab);
-    } else {
-      this.closeAllTabs(tabsContainer);
-    }
-
     tabs.forEach(function (tab) {
-      if (tab.classList.contains(_this2.activeClass)) {
-        _this2.closeTab(tab);
-      } else {
+      _this2.closeSiblings(tab);
+
+      if (!tab.classList.contains(_this2.activeClass)) {
         _this2.openTab(tab);
       }
     });
@@ -338,24 +331,26 @@ var tabs = {
   },
 
   /**
-   * Close all tabs
-   * @currentTab {DOM el} - when provide - close all but current (sibligns only)
+   * Close all siblings only tabs (avoid closing nested tabs)
    */
-  closeAllTabs: function closeAllTabs(tabsContainer) {
+  closeSiblings: function closeSiblings(tab) {
     var _this3 = this;
 
-    var currentTab = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-    var openedTabs = tabsContainer.querySelectorAll('.' + this.activeClass);
-    var currentTabName;
+    //nested tabs scenario: instead of querying all open tabs, let's just query siblings for both tab nav and tab content
+    var currentTabName = tab.dataset.tabName;
+    var siblings = this.getSiblings(tab);
+    siblings.forEach(function (sibling) {
+      var tabName = sibling.dataset.tabName;
+      console.log(sibling);
 
-    if (currentTab) {
-      currentTabName = currentTab.dataset.tabName;
-    }
-
-    openedTabs.forEach(function (tab) {
-      var tabName = tab.dataset.tabName;
-      if (tabName !== currentTabName) _this3.closeTab(tab);
+      _this3.closeTab(sibling);
     });
+  },
+  getSiblings: function getSiblings(tab) {
+    var siblings = Array.prototype.filter.call(tab.parentNode.children, function (child) {
+      return child !== tab;
+    });
+    return siblings;
   }
 };
 

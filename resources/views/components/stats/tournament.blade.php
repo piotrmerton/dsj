@@ -4,29 +4,34 @@
         {{ __('Statystyki') }} <a href="{{ $tournament['url'] }}">{{ $tournament['name'] }}</a>
     </h2>
 
-    <h3>{{ __('Zwycięstwa') }}</h3>
-    @foreach($tournament['stats']['wins'] as $jumper)
-        <dl class="stats__wins">
-            <dt>
-                <a href="{{ route('jumper', array( $jumper['name'], $tournament['id'], ) ) }}">
-                    {{ $jumper['name'] }}
-                </a> 
-                {{ $jumper['country'] }}
-            </dt>
-            <dd>{{ $jumper['quantity'] }}</dd>	
-        </dl>
-    @endforeach
 
-    <h3>{{ __('Podium') }}</h3>
-    @foreach($tournament['stats']['top_three'] as $jumper)
-        <dl class="stats__podiums">
-            <dt>
-                <a href="{{ route('jumper', array( $jumper['name'], $tournament['id'], ) ) }}">
-                    {{ $jumper['name'] }}
-                </a> 
-                {{ $jumper['country'] }}
-            </dt>
-            <dd>{{ $jumper['quantity'] }}</dd>	
-        </dl>
-    @endforeach    
+    <div class="ui-tabs tabs--stats">
+        <nav class="tabs__nav">
+            <ul class="nav__list">
+                <li class="list__item item--tab tab--open" data-tab-name="wins">
+                    <a class="do-toggle-tab" href="#">{{ __('Zwycięstwa')}}</a>
+                </li>
+                <li class="list__item item--tab" data-tab-name="top-three">
+                    <a class="do-toggle-tab" href="#">{{ __('Miejsca na podium')}}</a>
+                </li>                																		
+            </ul>
+        </nav>
+        <section class="tabs__contents">
+            <ul class="tabs__list">
+                <li class="list__item item--tab tab--open" data-tab-name="wins">
+                    <a class="tab__title do-toggle-tab">{{ __('Zwycięstwa')}}</a>
+                    <div class="tab__content">
+                        @include('components.stats.partials.table', ['stats' => $tournament['stats']['wins'] ])
+                    </div>
+                </li>
+                <li class="list__item item--tab" data-tab-name="top-three">
+                    <a class="tab__title do-toggle-tab">{{ __('Miejsca na podium')}}</a>
+                    <div class="tab__content">
+                        @include('components.stats.partials.table', ['stats' => $tournament['stats']['top_three'] ])
+                    </div>
+                </li>                
+            </ul>
+        </section>
+    </div><!-- /tabs -->
+
 </section>
