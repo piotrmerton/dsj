@@ -7,13 +7,13 @@
 	<table class="standings__table table--competition">
 		<thead>
 			<tr>
-				<td class="position">{{ __('Pozycja') }}</td>
-				<td class="bib">{{ __('Nr startowy') }}</td>
-				<td class="name">{{ __('Zawodnik') }}</td>
-				<td>{{ __('Kraj') }}</td>
-				<td class="result">{{ __('I seria') }}</td>
-				<td class="result">{{ __('II seria') }}</td>
-				<td class="result">{{ __('Suma') }}</td>
+				<th class="position">{{ __('Pozycja') }}</th>
+				<th class="bib">{{ __('Nr startowy') }}</th>
+				<th class="name">{{ __('Zawodnik') }}</th>
+				<th>{{ __('Kraj') }}</th>
+				<th class="result">{{ __('I seria') }}</th>
+				<th class="result">{{ __('II seria') }}</th>
+				<th class="result">{{ __('Suma') }}</th>
 			</tr>
 		</thead>
 		<tbody>

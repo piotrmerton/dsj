@@ -233,12 +233,14 @@ class Tournament {
             foreach($competition['results'] as $result) {
 
                 $name = $result['name'];
+                $country = $result['country'];
+                $real_position = $result['real_position'];
 
-                if($result['real_position'] == 1) {
+                if($real_position == 1) {
                     if( !array_key_exists( $name, $stats['wins']) ) {
                         $stats['wins'][$name] = array(
                             'name' => $name,
-                            'country' => $result['country'],
+                            'country' => $country,
                             'quantity' => 1,
                         );
                     } else {
@@ -246,30 +248,35 @@ class Tournament {
                     }
                 }
 
-                if($result['real_position'] <= 3) {
+                if($real_position <= 3) {
                     if( !array_key_exists( $name, $stats['top_three']) ) {
                         $stats['top_three'][$name] = array(
                             'name' => $name,
-                            'country' => $result['country'],
+                            'country' => $country,
                             'quantity' => 1,
+                            '1' => 0,
+                            '2' => 0,
+                            '3' => 0,
                         );
+                        $stats['top_three'][$name][$real_position]++;
                     } else {
                         $stats['top_three'][$name]['quantity']++;
+                        $stats['top_three'][$name][$real_position]++;
                     }
 
                     $stats['podiums'][$competition['id']][] = array(
-                        'real_position' => $result['real_position'],
+                        'real_position' => $real_position,
                         'name' => $name,
                     );
 
                 } 
                 
-                if($result['real_position'] <= 30) {
+                if($real_position <= 30) {
 
                     if( !array_key_exists( $name, $stats['final_round']) ) {
                         $stats['final_round'][$name] = array(
                             'name' => $name,
-                            'country' => $result['country'],
+                            'country' => $country,
                             'quantity' => 1,
                         );
                     } else {
@@ -291,7 +298,7 @@ class Tournament {
         $quantity  = array_column($stats['final_round'], 'quantity');
         array_multisort($quantity, SORT_DESC, $stats['final_round']);        
 
-        //dd($stats['wins']);
+        //dd($stats['top_three']);
 
         return $stats;
 

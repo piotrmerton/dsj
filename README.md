@@ -7,7 +7,6 @@ Interface based on Laravel framework to browse flat stats files (Tournament and 
 - competition, qualification and standings need to have the same filename (ID)
 
 ## TO DO
-- tournaments stats to tournament view: add tabs, improve styling, add flags
 - ranking stats to jumper view
 - qualifications standings to jumper stats?
 - standings by country
@@ -16,5 +15,6 @@ Interface based on Laravel framework to browse flat stats files (Tournament and 
 - API routes
 
 ## DONE
+- tournaments stats to tournament view
 - qualifications standings in competition view
 - charts.js for stats in Jumper view

@@ -23,12 +23,12 @@
 	<table class="standings__table table--ranking">
 		<thead>
 			<tr>
-				<td class="position">{{ __('Pozycja') }}</td>
-				<td class="name">{{ __('Zawodnik') }}</td>
-				<td>{{ __('Kraj') }}</td>
-				<td class="result">{{ __('Punkty') }}</td>
-				<td class="result">{{ __('Strata') }}</td>
-				<td class="result">{{ __('Występów') }}</td>
+				<th class="position">{{ __('Pozycja') }}</th>
+				<th class="name">{{ __('Zawodnik') }}</th>
+				<th>{{ __('Kraj') }}</th>
+				<th class="result">{{ __('Punkty') }}</th>
+				<th class="result">{{ __('Strata') }}</th>
+				<th class="result">{{ __('Występów') }}</th>
 			</tr>
 		</thead>
 		<tbody>

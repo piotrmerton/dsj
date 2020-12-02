@@ -21,13 +21,13 @@
                 <li class="list__item item--tab tab--open" data-tab-name="wins">
                     <a class="tab__title do-toggle-tab">{{ __('Zwycięstwa')}}</a>
                     <div class="tab__content">
-                        @include('components.stats.partials.table', ['stats' => $tournament['stats']['wins'] ])
+                        @include('components.stats.table.default', ['stats' => $tournament['stats']['wins'] ])
                     </div>
                 </li>
                 <li class="list__item item--tab" data-tab-name="top-three">
                     <a class="tab__title do-toggle-tab">{{ __('Miejsca na podium')}}</a>
                     <div class="tab__content">
-                        @include('components.stats.partials.table', ['stats' => $tournament['stats']['top_three'] ])
+                        @include('components.stats.table.topthree', ['stats' => $tournament['stats']['top_three'] ])
                     </div>
                 </li>                
             </ul>

@@ -46,12 +46,30 @@ table {
     margin: 0 auto 2rem;
 
     thead {
-        td {
+        th {
+            font-weight: 400;
             font-size: .875em;
             color: #adadad;
         }
     }
 
+    tbody {
+        tr {
+            &:nth-child(even) {
+                background: #f0f0f0;
+            }
+            @media (hover: hover) {
+
+                transition: background .2s ease-in-out;
+
+                &:hover {
+                    background: #f2d6a4;
+                }
+            }
+        }
+    }    
+
+    th,
     td {
         padding: .5rem;
     }

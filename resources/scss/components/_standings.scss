@@ -20,23 +20,6 @@
 		margin-left: auto;
 		margin-right: auto;
 
-
-		tbody {
-			tr {
-				&:nth-child(even) {
-					background: #f0f0f0;
-				}
-				@media (hover: hover) {
-
-					transition: background .2s ease-in-out;
-
-					&:hover {
-						background: #f2d6a4;
-					}
-				}
-			}
-		}
-
 		td {
 
 			&.position {
