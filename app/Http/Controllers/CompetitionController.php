@@ -23,7 +23,16 @@ class CompetitionController extends Controller
         $breadcrumbs->add( $tournament_standings['tournament']['name'], route('tournament', $id_tournament) );
         $breadcrumbs->add( $competition['name'], false);
 
-        //dd($tournament_standings);
+
+        // prepare prev/next competitions link for banner_Nav
+        $tournament_competitions = Tournament::loadTournamentCompetitions($id_tournament, false);
+        $last_competition_id = end($tournament_competitions)['id'];
+
+        $prev_competition_url = $id_competition == 1 ? false : route('competition', array($id_tournament, $id_competition - 1));
+        $next_competition_url = $last_competition_id == $id_competition ? false : route('competition', array($id_tournament, $id_competition + 1));
+
+
+        //dd($last_competition_id);
 
         return view('competition', 
             [
@@ -31,6 +40,8 @@ class CompetitionController extends Controller
             	'competition' => $competition,
                 'tournament_standings' => $tournament_standings,
                 'leader' => Standings::getLeader($id_tournament, $id_competition),
+                'prev_competition_url' => $prev_competition_url,
+                'next_competition_url' => $next_competition_url,
             ]
         );
     }

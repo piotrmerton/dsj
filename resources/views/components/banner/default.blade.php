@@ -9,11 +9,16 @@
             @show
         </div>
 
-        <figure class="banner__cover cover cover--overlay">
-        	@section('banner__cover')
+        <figure class="banner_cover cover cover--overlay">
+        	@section('banner_cover')
 
         	@show
         </figure>
 
     </div><!-- /viewport -->
+
+    @section('banner_nav')
+
+    @show
+
 </section>

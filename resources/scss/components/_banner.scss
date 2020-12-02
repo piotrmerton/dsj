@@ -47,6 +47,30 @@
 	}
 }
 
+.banner__nav {
+	position: absolute;
+	width: 100%;
+
+	display: flex;
+	justify-content: space-between;
+
+	padding: 0 1rem;
+
+	
+	.nav__item {
+		&.item--prev {
+			transform: rotate(-180deg);
+		}
+		&.item--disabled {
+			opacity: .25;
+		}		
+	}
+
+	img {
+		height: 3rem;
+	}
+}
+
 .banner--competition {
 
 }
