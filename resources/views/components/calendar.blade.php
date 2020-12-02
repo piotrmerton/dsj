@@ -7,10 +7,17 @@
 				<td>{{ $loop->iteration }}.</td>
 				<td><img class="ui-ico ico--flag" src="{{ asset('img/flags/'.$competition['country'].'.svg') }}" alt="{{ $competition['country'] }}"/></td>
 				<td>
-					<a href="{{ url('/competition/'.$tournament['id'].'/'.$competition['id']) }}">{{ $competition['name'] }}</a>
+					<a href="{{ $competition['url'] }}">{{ $competition['name'] }}</a>
 					@if (isset($competition['ranking']) )
 						<a class="competition__ranking" href="{{ $competition['ranking']['url'] }}">{{ $competition['ranking']['name'] }}</a>
 					@endif
+				</td>
+				<td>
+					<ul class="calendar__podium">
+						@foreach ($tournament['stats']['podiums'][$competition['id']] as $podium)
+							<li><span class="podium__position">{{ $podium['real_position'] }}.</span><a href="{{ route('jumper', array($podium['name'], $tournament['id']) ) }}">{{ $podium['name'] }}</a></li>
+						@endforeach
+					</ul>
 				</td>
 				<td>{{ date('j.n.Y', $competition['date']) }}</td>
 			</tr>

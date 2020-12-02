@@ -7,6 +7,7 @@
 	.calendar__table {
 		margin-left: auto;
 		margin-right: auto;
+		min-width: 40rem;
 
 		a {
 			display: block;
@@ -23,6 +24,14 @@
 		margin-right: .25rem;
 	}
 
+	.calendar__podium {
+		
+		li {
+			display: flex;
+			font-size: .75em;
+
+		}
+	}
 	.competition__ranking {
 		display: block;
 		font-size: .75em;

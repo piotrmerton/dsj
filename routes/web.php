@@ -33,7 +33,7 @@ Route::get('competition/{id_tournament}/{id_competition}', [CompetitionControlle
 
 Route::get('standings/{id_tournament}/{id_competition}', [StandingsController::class, 'display'])->name('standings');;
 
-Route::get('jumper/{name}/{id_tournament}', [JumperController::class, 'display']);
+Route::get('jumper/{name}/{id_tournament}', [JumperController::class, 'display'])->name('jumper');;
 
 Route::get('ranking/{id_tournament}/{id_ranking}', [RankingController::class, 'display'])->name('ranking');
 Route::get('ranking/{id_tournament}/{id_ranking}/{stage?}', [RankingController::class, 'display'])->name('ranking');;

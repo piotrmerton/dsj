@@ -53,11 +53,13 @@ class Tournament {
 	}
 
 
-    public static function loadTournament($id_tournament) : array {
+    public static function loadTournament($id_tournament, $stats = false) : array {
 
         $tournament_data = self::loadTournamentMeta($id_tournament);
         $tournament_data['calendar'] = self::getCalendar($tournament_data);
         $tournament_data['latest_competition_id'] = end($tournament_data['calendar'])['id'];
+
+        if($stats) $tournament_data['stats'] = self::getStats($id_tournament);
 
         return $tournament_data;
 
@@ -127,7 +129,9 @@ class Tournament {
                     $file = file($path .'/'. $item);
 
                     if($header) $competition_data = DsjData::parseDsjStatHeader($file);
-                    $competition_data['id'] = str_replace('.txt', '', $item);
+                    $id_competition = str_replace('.txt', '', $item);
+                    $competition_data['id'] = $id_competition;
+                    $competition_data['url'] = route('competition', array($id_tournament, $id_competition) );
 
                     if( $results ) {
                     	$competition_data['results'] = DsjData::parseDsjStatResults($file);
@@ -218,12 +222,13 @@ class Tournament {
         $stats['top_three'] = array();
         $stats['wins'] = array();
         $stats['number_of_competitions'] = count($competitions);
+        $stats['podiums'] = array();
 
         //dd($competitions);
 
         foreach($competitions as $competition) {
 
-            if(isset($last_competition_id) && (int)$competition['id'] > (int)$last_competition_id) break;
+            if($last_competition_id !== false && (int)$competition['id'] > (int)$last_competition_id) break;
 
             foreach($competition['results'] as $result) {
 
@@ -241,7 +246,15 @@ class Tournament {
                     $stats['wins'][$name] = 0;
                 }      
 
-                if($result['real_position'] <= 3) $stats['top_three'][$name]++;
+                if($result['real_position'] <= 3) {
+                    
+                    $stats['top_three'][$name]++;
+                    $stats['podiums'][$competition['id']][] = array(
+                        'real_position' => $result['real_position'],
+                        'name' => $name,
+                    );                     
+
+                }
                 if($result['real_position'] == 1) $stats['wins'][$name]++;
                 if($result['real_position'] <= 30) $stats['final_round'][$name]++;
 
