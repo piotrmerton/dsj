@@ -234,30 +234,6 @@ class Tournament {
 
                 $name = $result['name'];
 
-                // if( !array_key_exists( $name, $stats['final_round'] ) ) {
-                //     $stats['final_round'][$name] = 0;
-                // }
-
-                // if( !array_key_exists( $name, $stats['top_three'] ) ) {
-                //     $stats['top_three'][$name] = 0;
-                // }               
-                
-                // if( !array_key_exists( $name, $stats['wins'] ) ) {
-                //     $stats['wins'][$name] = 0;
-                // }      
-
-                // if($result['real_position'] <= 3) {
-                    
-                //     $stats['top_three'][$name]++;
-                //     $stats['podiums'][$competition['id']][] = array(
-                //         'real_position' => $result['real_position'],
-                //         'name' => $name,
-                //     );                     
-
-                // }
-                // if($result['real_position'] == 1) $stats['wins'][$name]++;
-                // if($result['real_position'] <= 30) $stats['final_round'][$name]++;
-
                 if($result['real_position'] == 1) {
                     if( !array_key_exists( $name, $stats['wins']) ) {
                         $stats['wins'][$name] = array(
@@ -288,17 +264,17 @@ class Tournament {
 
                 } 
                 
-                if( !array_key_exists( $name, $stats['final_round']) ) {
-                    $stats['final_round'][$name] = array(
-                        'name' => $name,
-                        'country' => $result['country'],
-                        'quantity' => 0,
-                    );
-                }
-
                 if($result['real_position'] <= 30) {
-                    $stats['final_round'][$name]['quantity']++;
-                    
+
+                    if( !array_key_exists( $name, $stats['final_round']) ) {
+                        $stats['final_round'][$name] = array(
+                            'name' => $name,
+                            'country' => $result['country'],
+                            'quantity' => 1,
+                        );
+                    } else {
+                        $stats['final_round'][$name]['quantity']++;
+                    }
                 }                
 
 
