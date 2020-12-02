@@ -163,7 +163,7 @@ class DsjData {
     /**
      * parse Results of Tournament Standings file
      */
-    public static function parseDsjStatStandings(array $file, string $id_tournament = NULL, int $id_competition = NULL, bool $compare = true) : array {
+    public static function parseDsjStatStandings(array $file, string $id_tournament = NULL, int $id_competition = NULL, bool $trend = true) : array {
 
         $real_position = 1;
         $iteration = 1;
@@ -215,11 +215,11 @@ class DsjData {
             $previous_jumper_result = $points;
 
             //trend in Tournament
-            if(isset($id_tournament) && isset($id_competition) && $id_competition > 1 && $compare == true) {
+            if(isset($id_tournament) && isset($id_competition) && $id_competition > 1 && $trend == true) {
 
                 $previous_standings = Standings::loadSingleStandings($id_tournament, (int)$id_competition - 1, false);
 
-                $jumper_data = Standings::addTrend($jumper_data, $previous_standings['standings']['results']);
+                $jumper_data = Standings::addTrend($jumper_data, $previous_standings['standings']['results'], true);
 
             }
 

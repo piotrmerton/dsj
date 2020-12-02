@@ -17,7 +17,7 @@ class CompetitionController extends Controller
 
         $competition = Competition::loadCompetition($id_tournament, $id_competition);
         
-        $tournament_standings = Standings::loadSingleStandings($id_tournament, $id_competition);
+        $tournament_standings = Standings::loadSingleStandings($id_tournament, $id_competition, true, true);
 
         $breadcrumbs = new Breadcrumbs();
         $breadcrumbs->add( $tournament_standings['tournament']['name'], route('tournament', $id_tournament) );
@@ -29,7 +29,8 @@ class CompetitionController extends Controller
             [
                 'breadcrumbs' => $breadcrumbs->get(),
             	'competition' => $competition,
-            	'tournament_standings' => $tournament_standings
+                'tournament_standings' => $tournament_standings,
+                'leader' => Standings::getLeader($id_tournament, $id_competition),
             ]
         );
     }

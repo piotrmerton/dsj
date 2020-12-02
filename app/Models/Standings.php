@@ -9,7 +9,10 @@ use App\Models\Tournament;
 class Standings {
 
 
-    public static function loadSingleStandings($id_tournament, $id_competition, $compare = true) : array {
+    public static function loadSingleStandings($id_tournament, $id_competition, $compare = true, $stats = false) : array {
+
+        $tournament_meta = Tournament::loadTournamentMeta($id_tournament);
+
 
         $path = DsjData::$dir_tournaments.'/'.$id_tournament;
 
@@ -19,17 +22,14 @@ class Standings {
         $standings = DsjData::parseDsjStatStandingsHeader($file);
         $standings['results'] = DsjData::parseDsjStatStandings($file, $id_tournament, $id_competition, $compare);
 
-        $tournament_meta = Tournament::loadTournamentMeta($id_tournament);
-
         $data = array(
         	'tournament' => $tournament_meta,
         	'standings' => $standings,
             'latest_competition_id' => $id_competition,
         );
 
-
         //WARNING: this can be potentially significant performance bottleneck
-        $data['tournament']['stats'] = Tournament::getStats($id_tournament, $id_competition);
+        if($stats) $data['tournament']['stats'] = Tournament::getStats($id_tournament, $id_competition);
 
         return $data;
 
@@ -81,8 +81,15 @@ class Standings {
 
     }
 
+    public static function getLeader($id_tournament, $id_competition) {
 
-   
+        if($id_competition == 1) return false;
+
+        $standings = self::loadSingleStandings($id_tournament, $id_competition - 1, false, false);
+
+        return $standings['standings']['results'][0]['name'];
+
+    }
 
 }
 

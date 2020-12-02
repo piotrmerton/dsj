@@ -18,7 +18,7 @@
 		</thead>
 		<tbody>
 			@foreach ($competition['results'] as $row)
-				<tr>
+				<tr @if ($row['name'] == $leader)class="standings__leader"@endif>
 					<td class="position">{{ $row['position'] != 0 ? $row['position'].'.' : '' }}</td>
 					<td class="bib">{{ $row['bib'] }}</td>
 					<td class="name"><a href="{{ url('/jumper/'.$row['name'].'/'.$competition['tournament']['id']) }}">{{ $row['name'] }}</a></td>
