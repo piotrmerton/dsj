@@ -1,8 +1,51 @@
+.ui-tabs {
+    display: grid;
+}
 .tabs__nav {
+
+    display: inline-flex;
+    border: 1px solid silver;
+    border-radius: 2rem;
+    margin: 1rem auto 2rem;
+    overflow: hidden;
+
+    //design
+    .nav__list {
+        display: flex;
+        justify-content: center;
+        .list__item {
+            border-right: 1px solid silver;
+
+            a {
+                display: block;
+                padding: 1rem 2rem;
+                font-size: .875em;
+                text-transform: uppercase;
+                font-weight: 600;
+                letter-spacing: .05em;
+                color: #272727;
+            }
+
+            &:first-child {
+                a {
+                    padding-left: 2.5rem;
+                }
+            }
+            &:last-child {
+                border: 0;
+                a {
+                    padding-right: 2.5rem;
+                }
+            }
+        }
+    } 
+
+    //interaction
     .item--tab {
         &.tab--open {
+            background: #f0f0f0;
             a {
-                text-decoration: underline;
+                //text-decoration: underline;
             }
         }
     }
@@ -16,17 +59,6 @@
     display: none;
 }
 
-.tabs__nav {
-    .nav__list {
-        display: flex;
-        justify-content: center;
-        margin: 1rem 0;
-
-        .list__item {
-            margin: 0 .5rem;
-        }
-    }    
-}
 
 
 .tabs__contents {
