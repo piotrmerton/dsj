@@ -283,15 +283,15 @@ class Tournament {
         }
 
         $quantity  = array_column($stats['wins'], 'quantity');
-        array_multisort($stats['wins'], SORT_DESC, $quantity);
+        array_multisort($quantity, SORT_DESC, $stats['wins']);
 
         $quantity  = array_column($stats['top_three'], 'quantity');
-        array_multisort($stats['top_three'], SORT_DESC, $quantity);
+        array_multisort($quantity, SORT_DESC, $stats['top_three']);
         
         $quantity  = array_column($stats['final_round'], 'quantity');
-        array_multisort($stats['final_round'], SORT_DESC, $quantity);        
+        array_multisort($quantity, SORT_DESC, $stats['final_round']);        
 
-        //dd($stats);
+        //dd($stats['wins']);
 
         return $stats;
 
