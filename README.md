@@ -10,6 +10,7 @@ Interface based on Laravel framework to browse flat stats files (Tournament and 
 - ranking stats to jumper view
 - qualifications standings to jumper stats?
 - standings by country
+- slugify names in URLs
 - error handling when file doesn’t exist
 - standings bug: 31 position parsing when 31 jumpers qualified to final round
 - API routes
