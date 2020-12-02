@@ -234,37 +234,86 @@ class Tournament {
 
                 $name = $result['name'];
 
-                if( !array_key_exists( $name, $stats['final_round'] ) ) {
-                    $stats['final_round'][$name] = 0;
+                // if( !array_key_exists( $name, $stats['final_round'] ) ) {
+                //     $stats['final_round'][$name] = 0;
+                // }
+
+                // if( !array_key_exists( $name, $stats['top_three'] ) ) {
+                //     $stats['top_three'][$name] = 0;
+                // }               
+                
+                // if( !array_key_exists( $name, $stats['wins'] ) ) {
+                //     $stats['wins'][$name] = 0;
+                // }      
+
+                // if($result['real_position'] <= 3) {
+                    
+                //     $stats['top_three'][$name]++;
+                //     $stats['podiums'][$competition['id']][] = array(
+                //         'real_position' => $result['real_position'],
+                //         'name' => $name,
+                //     );                     
+
+                // }
+                // if($result['real_position'] == 1) $stats['wins'][$name]++;
+                // if($result['real_position'] <= 30) $stats['final_round'][$name]++;
+
+                if($result['real_position'] == 1) {
+                    if( !array_key_exists( $name, $stats['wins']) ) {
+                        $stats['wins'][$name] = array(
+                            'name' => $name,
+                            'country' => $result['country'],
+                            'quantity' => 1,
+                        );
+                    } else {
+                        $stats['wins'][$name]['quantity']++;
+                    }
                 }
 
-                if( !array_key_exists( $name, $stats['top_three'] ) ) {
-                    $stats['top_three'][$name] = 0;
-                }               
-                
-                if( !array_key_exists( $name, $stats['wins'] ) ) {
-                    $stats['wins'][$name] = 0;
-                }      
-
                 if($result['real_position'] <= 3) {
-                    
-                    $stats['top_three'][$name]++;
+                    if( !array_key_exists( $name, $stats['top_three']) ) {
+                        $stats['top_three'][$name] = array(
+                            'name' => $name,
+                            'country' => $result['country'],
+                            'quantity' => 1,
+                        );
+                    } else {
+                        $stats['top_three'][$name]['quantity']++;
+                    }
+
                     $stats['podiums'][$competition['id']][] = array(
                         'real_position' => $result['real_position'],
                         'name' => $name,
-                    );                     
+                    );
 
+                } 
+                
+                if( !array_key_exists( $name, $stats['final_round']) ) {
+                    $stats['final_round'][$name] = array(
+                        'name' => $name,
+                        'country' => $result['country'],
+                        'quantity' => 0,
+                    );
                 }
-                if($result['real_position'] == 1) $stats['wins'][$name]++;
-                if($result['real_position'] <= 30) $stats['final_round'][$name]++;
+
+                if($result['real_position'] <= 30) {
+                    $stats['final_round'][$name]['quantity']++;
+                    
+                }                
+
 
             }   
 
         }
 
-        array_multisort($stats['final_round'], SORT_DESC);
-        array_multisort($stats['top_three'], SORT_DESC);
-        array_multisort($stats['wins'], SORT_DESC);        
+        $quantity  = array_column($stats['wins'], 'quantity');
+        array_multisort($stats['wins'], SORT_DESC, $quantity);
+
+        $quantity  = array_column($stats['top_three'], 'quantity');
+        array_multisort($stats['top_three'], SORT_DESC, $quantity);
+        
+        $quantity  = array_column($stats['final_round'], 'quantity');
+        array_multisort($stats['final_round'], SORT_DESC, $quantity);        
 
         //dd($stats);
 

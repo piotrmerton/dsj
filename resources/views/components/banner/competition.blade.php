@@ -11,6 +11,7 @@
 
 	<ul class="banner__meta">
 		<li><a href="{{ $tournament_standings['tournament']['url'] }}">{{ $tournament_standings['tournament']['name'] }}</a></li>
+		<li>{{ __('Konkurs :stage', ['stage' => $tournament_standings['standings']['stage'] ]) }}</li>
 		<li>{{ date('j.n.Y', $competition['date']) }}</li>
 	</ul>
 

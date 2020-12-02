@@ -32,7 +32,7 @@ class CompetitionController extends Controller
         $next_competition_url = $last_competition_id == $id_competition ? false : route('competition', array($id_tournament, $id_competition + 1));
 
 
-        //dd($last_competition_id);
+        //dd($tournament_standings);
 
         return view('competition', 
             [

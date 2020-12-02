@@ -42,7 +42,7 @@
 					<td><img class="ui-ico ico--flag" src="{{ asset('img/flags/'.$row['country'].'.svg') }}" alt="{{ $row['country'] }}"/></td>
 					<td class="result">{{ $row['points'] }}</td>
 					<td class="result">{{ $row['difference'] }}</td>
-					<td class="result">{{ $data['tournament']['stats']['final_round'][$row['name']] }}</td>
+					<td class="result">{{ $data['tournament']['stats']['final_round'][$row['name']]['quantity'] }}</td>
 				</tr>
 			@endforeach
 		</tbody>

@@ -44,8 +44,15 @@
 	justify-content: center;
 
 	li {
-		margin: 0 .5rem;
+        &:not(:last-child) {
+            &:after {
+                content: '⋅';
+                display: inline-block;
+                margin: 0 1rem;           
+            }
+        }		
 	}
+
 }
 
 .banner__nav {

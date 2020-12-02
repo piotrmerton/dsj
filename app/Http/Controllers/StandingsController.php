@@ -15,7 +15,7 @@ class StandingsController extends Controller
     public function display($id_tournament, $id_competition)
     {
 
-        $data = Standings::loadSingleStandings($id_tournament, $id_competition);
+        $data = Standings::loadSingleStandings($id_tournament, $id_competition, true, true);
 
         $breadcrumbs = new Breadcrumbs();
 
