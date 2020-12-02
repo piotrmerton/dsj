@@ -57,8 +57,5 @@
 					</ul>
 				</section>
 			</div><!-- /tabs -->
-	
-		</div>
-	</div>
-
+			
 @endsection

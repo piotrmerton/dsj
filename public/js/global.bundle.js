@@ -288,8 +288,10 @@ var tabs = {
 
     var selector = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.selector;
     if (document.querySelector(selector) === null) return;
-    var tabContainer = document.querySelector(selector);
-    var buttons = tabContainer.querySelectorAll(this.buttonSelector);
+    var tabContainer = document.querySelector(selector); //multiple containers: bind all buttons in document instead of one container only
+
+    var buttons = document.querySelectorAll(this.buttonSelector);
+    console.log(buttons);
     buttons.forEach(function (button) {
       button.addEventListener('click', function (event) {
         var target = event.target;

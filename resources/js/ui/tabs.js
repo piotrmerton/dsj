@@ -14,7 +14,10 @@ export let tabs = {
         
         let tabContainer = document.querySelector(selector);
 
-        let buttons = tabContainer.querySelectorAll(this.buttonSelector);
+        //multiple containers: bind all buttons in document instead of one container only
+        let buttons = document.querySelectorAll(this.buttonSelector);
+
+        console.log(buttons);
 
         buttons.forEach( (button) => {
 
