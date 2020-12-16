@@ -1,0 +1,57 @@
+﻿Puchar Świata 2020-12-05
+Park City HS134 Wyniki kwalifikacji
+
+Poz.  Nr    Zawodnik                 Kraj          Długość       Punkty Zakwalifik.
+1.    38    Anders Jacobsen          NOR           130.0 m        137.0           q
+2.    53    Matti Hautamaeki         FIN           129.0 m        136.2           Q
+3.    49    Martin Schmitt           GER           129.5 m        134.6           Q
+4.    40    Thomas Morgenstern       AUT           129.0 m        134.2           q
+5.    45    Risto Jussilainen        FIN           128.0 m        132.4           Q
+6.    51    Kazuyoshi Funaki         JPN           127.5 m        131.5           Q
+7.    41    Janne Ahonen             FIN           127.0 m        131.1           q
+8.    52    Andreas Widhoelzl        AUT           127.0 m        130.6           Q
+9.    29    Hideharu Miyahira        JPN           127.5 m        130.5           q
+      50    Jani Soininen            FIN           127.5 m        130.5           Q
+11.   46    Sven Hannawald           GER           126.0 m        129.3           Q
+12.   47    Noriaki Kasai            JPN           125.0 m        128.0           Q
+13.   27    Roberto Cecon            ITA           128.0 m        126.9           q
+14.   34    Andreas Goldberger       AUT           124.5 m        126.6           q
+15.   36    Stefan Horngacher        AUT           127.5 m        126.5           q
+16.   42    Gregor Schlierenzauer    AUT           125.5 m        126.4           q
+17.   15    Primoż Peterka           SLO           127.0 m        125.6           q
+18.   48    Simon Ammann             SUI           123.5 m        124.8           Q
+19.   22    Kamil Stoch              POL           123.5 m        124.3           q
+      33    Masahiko Harada          JPN           123.5 m        124.3           q
+21.   23    Tom Hilde                NOR           126.5 m        124.2           q
+22.   11    Jernej Damjan            SLO           126.0 m        123.3           q
+23.   17    Tommy Ingebrigtsen       NOR           126.5 m        123.2           q
+24.   20    Lasse Ottesen            NOR           125.0 m        122.5           q
+25.   3     Dieter Thoma             GER           124.5 m        122.1           q
+26.   31    Takanobu Okabe           JPN           125.0 m        121.0           q
+27.   35    Peter Zonta              SLO           124.5 m        120.6           q
+28.   39    Jakub Janda              CZE           125.0 m        120.5           q
+29.   24    Dmitri Vassiliev         RUS           123.5 m        120.3           q
+30.   26    Veli-Matti Lindstroem    FIN           124.5 m        120.1           q
+31.   2     Domen Prevc              SLO           123.5 m        119.3           q
+      43    Robert Kranjec           SLO           123.5 m        119.3           q
+33.   25    Jan Matura               CZE           124.5 m        119.1           q
+34.   30    Daniel-Andre Tande       NOR           124.0 m        118.2           q
+35.   18    Martin Hoellwarth        AUT           124.5 m        118.1           q
+36.   13    Michael Uhrmann          GER           124.5 m        117.6           q
+37.   32    Daiki Ito                JPN           123.5 m        117.3           q
+38.   16    Tami Kiuru               FIN           121.0 m        116.8           q
+39.   8     Anders Bardal            NOR           122.0 m        115.1           q
+40.   7     Roar Ljoekelsoey         NOR           120.0 m        115.0           q
+41.   21    Adam Małysz              POL           119.0 m        114.7           q
+      28    Emmanuel Chedal          FRA           121.5 m        114.7           q
+43.   5     Nicolas Dessum           FRA           122.0 m        114.1           q
+44.   37    Wolfgang Loitzl          AUT           121.5 m        113.7           q
+45.   12    Peter Prevc              SLO           120.5 m        112.4           q
+46.   10    Martin Koch              AUT           119.0 m        110.7           q
+47.   9     Andreas Kofler           AUT           119.0 m        108.7           q
+48.   14    Ari-Pekka Nikkola        FIN           116.5 m        106.2           q
+49.   19    Toni Nieminen            FIN           116.0 m        104.8           q
+50.   44    Ville Kantee             FIN           124.5 m*        99.6           Q
+51.   1     Johan Remen Evensen      NOR           112.0 m         97.1            
+52.   4     Michael Neumayer         GER            93.0 m*        34.4            
+53.   6     Severin Freund           GER            78.0 m*         7.4            

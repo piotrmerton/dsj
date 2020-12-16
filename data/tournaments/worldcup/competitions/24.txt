@@ -1,0 +1,54 @@
+﻿Puchar Świata 2020-12-16
+Sapporo HS134 Wyniki konkursu
+
+Poz.  Nr    Zawodnik                 Kraj          I seria     II seria       Punkty
+1.    42    Gregor Schlierenzauer    AUT           140.5 m      136.5 m        302.6
+2.    43    Simon Ammann             SUI           139.0 m      135.5 m        298.6
+3.    39    Janne Ahonen             FIN           137.0 m      136.0 m        297.4
+4.    50    Martin Schmitt           GER           134.0 m      139.0 m        295.4
+5.    46    Kazuyoshi Funaki         JPN           135.0 m      137.5 m        295.0
+6.    47    Noriaki Kasai            JPN           137.0 m      135.5 m        294.0
+7.    19    Adam Małysz              POL           137.5 m      133.5 m        293.3
+8.    44    Risto Jussilainen        FIN           137.0 m      136.0 m        292.9
+9.    48    Matti Hautamaeki         FIN           138.0 m      135.5 m        292.3
+10.   36    Masahiko Harada          JPN           139.5 m      138.0 m        291.0
+11.   33    Wolfgang Loitzl          AUT           138.0 m      138.0 m        290.3
+12.   34    Stefan Horngacher        AUT           138.0 m      136.5 m        288.1
+13.   49    Andreas Widhoelzl        AUT           133.0 m      138.0 m        287.8
+14.   32    Takanobu Okabe           JPN           140.5 m      133.5 m        287.7
+15.   38    Ville Kantee             FIN           135.5 m      140.0 m        286.9
+16.   45    Jani Soininen            FIN           135.0 m      136.5 m        286.2
+17.   35    Anders Jacobsen          NOR           138.0 m      136.0 m        285.7
+18.   9     Andreas Kofler           AUT           137.5 m      136.0 m        283.3
+19.   3     Dieter Thoma             GER           139.0 m      135.0 m        282.2
+20.   40    Thomas Morgenstern       AUT           136.5 m      135.5 m        282.1
+21.   26    Hideharu Miyahira        JPN           134.5 m      138.5 m        281.4
+      37    Jakub Janda              CZE           136.5 m      136.5 m        281.4
+23.   25    Emmanuel Chedal          FRA           135.5 m      136.0 m        278.7
+      30    Daiki Ito                JPN           134.5 m      137.0 m        278.7
+25.   22    Tom Hilde                NOR           134.5 m      132.5 m        274.1
+26.   18    Martin Hoellwarth        AUT           139.0 m      126.0 m        268.0
+27.   24    Veli-Matti Lindstroem    FIN           138.5 m      110.5 m        239.7
+28.   21    Dmitri Vassiliev         RUS           133.0 m      116.0 m        238.2
+29.   41    Sven Hannawald           GER           137.0 m       81.5 m        185.3
+30.   6     Severin Freund           GER           132.5 m       84.5 m        174.6
+31.   17    Lasse Ottesen            NOR           130.5 m                     131.4
+      29    Roberto Cecon            ITA           130.5 m                     131.4
+33.   4     Michael Neumayer         GER           130.0 m                     130.0
+34.   11    Martin Koch              AUT           125.0 m                     127.0
+35.   23    Kamil Stoch              POL           124.5 m                     124.6
+36.   13    Michael Uhrmann          GER           128.0 m                     123.4
+37.   5     Nicolas Dessum           FRA           125.5 m                     117.9
+38.   16    Tami Kiuru               FIN           124.0 m                     116.7
+39.   7     Anders Bardal            NOR           124.0 m                     115.7
+40.   2     Domen Prevc              SLO           115.5 m                     106.4
+41.   20    Tommy Ingebrigtsen       NOR           114.5 m                     103.1
+      27    Jan Matura               CZE           117.0 m                     103.1
+43.   10    Jernej Damjan            SLO           115.0 m                     102.5
+44.   8     Roar Ljoekelsoey         NOR           114.0 m                      99.7
+45.   31    Peter Zonta              SLO           109.0 m                      95.7
+46.   15    Primoż Peterka           SLO           105.5 m                      85.4
+47.   12    Ari-Pekka Nikkola        FIN           105.5 m                      84.9
+48.   28    Daniel-Andre Tande       NOR            91.5 m                      58.7
+49.   1     Johan Remen Evensen      NOR            86.5 m*                     21.2
+50.   14    Peter Prevc              SLO            70.0 m*                      0.0

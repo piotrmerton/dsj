@@ -1,0 +1,57 @@
+﻿Puchar Świata 2020-12-04
+Klasyfikacja po 21/33 konkursie
+
+Poz.  Zawodnik                 Kraj         I    II   III     Punkty
+1.    Matti Hautamaeki         FIN          1     2     2        606
+2.    Andreas Widhoelzl        AUT          1     1     -        565
+3.    Kazuyoshi Funaki         JPN          1     1     -        552
+4.    Jani Soininen            FIN          1     1     2        551
+5.    Martin Schmitt           GER          1     1     1        517
+6.    Simon Ammann             SUI          2     1     1        509
+7.    Noriaki Kasai            JPN          1     -     3        492
+8.    Risto Jussilainen        FIN          1     3     -        449
+      Sven Hannawald           GER          1     3     -        449
+10.   Ville Kantee             FIN          1     1     1        424
+11.   Gregor Schlierenzauer    AUT          1     1     -        423
+      Robert Kranjec           SLO          -     1     -        423
+13.   Janne Ahonen             FIN          -     1     -        421
+14.   Thomas Morgenstern       AUT          1     -     1        409
+15.   Jakub Janda              CZE          1     1     1        400
+16.   Anders Jacobsen          NOR          -     1     -        342
+17.   Wolfgang Loitzl          AUT          1     -     -        334
+18.   Stefan Horngacher        AUT          1     -     2        333
+19.   Peter Zonta              SLO          -     -     2        317
+20.   Andreas Goldberger       AUT          -     -     -        308
+21.   Masahiko Harada          JPN          1     -     1        304
+22.   Daiki Ito                JPN          -     -     -        301
+23.   Daniel-Andre Tande       NOR          1     -     -        279
+      Takanobu Okabe           JPN          -     -     -        279
+25.   Hideharu Miyahira        JPN          -     -     -        269
+26.   Emmanuel Chedal          FRA          1     -     -        265
+27.   Roberto Cecon            ITA          -     2     -        264
+28.   Veli-Matti Lindstroem    FIN          1     -     -        258
+29.   Jan Matura               CZE          -     -     -        257
+30.   Dmitri Vassiliev         RUS          -     -     -        242
+31.   Tom Hilde                NOR          -     -     -        241
+32.   Kamil Stoch              POL          -     -     1        239
+33.   Adam Małysz              POL          -     -     -        230
+34.   Lasse Ottesen            NOR          -     -     -        221
+35.   Martin Hoellwarth        AUT          -     -     -        218
+      Toni Nieminen            FIN          -     1     -        218
+37.   Tommy Ingebrigtsen       NOR          -     -     1        215
+38.   Tami Kiuru               FIN          1     -     -        214
+39.   Primoż Peterka           SLO          -     -     1        208
+40.   Ari-Pekka Nikkola        FIN          -     -     -        181
+41.   Michael Uhrmann          GER          -     -     1        175
+42.   Peter Prevc              SLO          -     -     -        174
+43.   Jernej Damjan            SLO          -     -     -        166
+44.   Martin Koch              AUT          -     -     -        153
+45.   Andreas Kofler           AUT          -     -     -        147
+46.   Anders Bardal            NOR          -     -     -        138
+47.   Roar Ljoekelsoey         NOR          -     -     -        134
+48.   Severin Freund           GER          -     -     -        104
+49.   Nicolas Dessum           FRA          -     -     -         73
+50.   Michael Neumayer         GER          -     -     -         66
+51.   Dieter Thoma             GER          -     -     -         59
+52.   Domen Prevc              SLO          -     -     -         31
+53.   Johan Remen Evensen      NOR          -     -     -         17
