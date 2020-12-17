@@ -16,7 +16,7 @@
 	}
 	.standings__table {
 
-		min-width: 40rem;
+		min-width: 45rem;
 		margin-left: auto;
 		margin-right: auto;
 
@@ -29,7 +29,7 @@
 
 			&.position,
 			&.bib {
-				max-width: 5rem;
+				width: 1rem;
 			}
 
 			&.name {
@@ -78,6 +78,63 @@
 
 			border-top: .375rem solid red;			
 		}
+
+	}
+}
+
+
+.table--competition {
+	&.table--fis {
+
+		tr {
+			border: 0;
+			
+		}
+
+		tbody {
+
+			td {
+				color: #fff;
+				padding: .75rem .5rem;
+				//font-size: 1.25em;
+				//font-weight: 300;
+
+				//background: linear-gradient(180deg, rgba(111,104,131,1) 0%, rgba(25,25,62,1) 20%, rgba(22,42,90,1) 80%);	
+				background: #161334;	
+				border-bottom: 2px solid #6a6b89;		
+			}
+
+			.position {
+				display: table-cell;
+				background: linear-gradient(180deg, rgba(221,149,58,1) 0%, rgba(249,205,33,1) 50%, rgba(245,159,40,1) 90%);
+				color: #181236;		
+				border-color: #e99630;		
+			}
+			.position,
+			.bib {
+				font-weight: 600;
+				text-align: center;
+			}
+
+			.name {
+				a {
+					color: inherit;
+				}
+			}
+
+			.result {
+				border-left: 2px solid #6a6b89;
+				//background: linear-gradient(180deg, rgba(111,104,131,1) 0%, rgba(13,11,39,1) 20%, rgba(11,23,60,1) 80%);
+				text-align: center;
+
+				&.result--total {
+					background: #080514;
+					//background: linear-gradient(180deg, rgba(111,104,131,1) 0%, rgba(9,6,21,1) 20%, rgba(13,18,47,1) 80%);
+					
+				}
+			}
+		}
+
 
 	}
 }

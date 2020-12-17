@@ -4,11 +4,11 @@
 		{{ __('Wyniki finałowe konkursu :competition', ['competition' => $competition['name']]) }}
 	</h2>
 
-	<table class="standings__table table--competition">
+	<table class="standings__table table--competition table--fis">
 		<thead>
 			<tr>
 				<th class="position">{{ __('Pozycja') }}</th>
-				<th class="bib">{{ __('Nr startowy') }}</th>
+				<th class="bib">{{ __('Numer startowy') }}</th>
 				<th class="name">{{ __('Zawodnik') }}</th>
 				<th>{{ __('Kraj') }}</th>
 				<th class="result">{{ __('I seria') }}</th>
@@ -23,9 +23,9 @@
 					<td class="bib">{{ $row['bib'] }}</td>
 					<td class="name"><a href="{{ url('/jumper/'.$row['name'].'/'.$competition['tournament']['id']) }}">{{ $row['name'] }}</a></td>
 					<td><img class="ui-ico ico--flag" src="{{ asset('img/flags/'.$row['country'].'.svg') }}" alt="{{ $row['country'] }}"/></td>
-					<td class="result">{{ $row['round1'] }}</td>
-					<td class="result">{{ $row['round2'] ? $row['round2'] : '' }}</td>
-					<td class="result">{{ $row['result'] }}</td>
+					<td class="result result--jump1">{{ $row['round1'] }}</td>
+					<td class="result result--jump2">{{ $row['round2'] ? $row['round2'] : '' }}</td>
+					<td class="result result--total">{{ $row['result'] }}</td>
 				</tr>
 			@endforeach
 		</tbody>
